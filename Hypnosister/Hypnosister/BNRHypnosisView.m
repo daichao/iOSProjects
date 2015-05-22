@@ -75,6 +75,6 @@
 
 -(void)setCircleColor:(UIColor *)circleColor{
     _circleColor=circleColor;
-    [self setNeedsDisplay];
+    [self setNeedsDisplay];//重新绘制自己
 }
 @end

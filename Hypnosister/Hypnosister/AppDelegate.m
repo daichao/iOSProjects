@@ -21,13 +21,37 @@
     
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
     
-    CGRect firstFrame=self.window.bounds;
+//    CGRect firstFrame=self.window.bounds;
     
-    BNRHypnosisView *firstView=[[BNRHypnosisView alloc]initWithFrame:firstFrame];
+//    BNRHypnosisView *firstView=[[BNRHypnosisView alloc]initWithFrame:firstFrame];
     
 //    firstView.backgroundColor=[UIColor redColor];
     
-    [self.window addSubview:firstView];
+//    [self.window addSubview:firstView];
+    //创建两个CGRect结构分别作为UIScrollView对象和BNRHypnosisView对象的frame
+    CGRect screenRect=self.window.bounds;
+    CGRect bigRect=screenRect;
+    bigRect.size.width *=2.0;
+//    bigRect.size.height *=2.0;
+    
+    //创建一个UIScrollView对象，将其尺寸设为窗口大小
+    UIScrollView *scrollView=[[UIScrollView alloc]initWithFrame:screenRect];
+    [scrollView setPagingEnabled:YES];
+    [self.window addSubview:scrollView];
+    
+    //创建一个有着超大尺寸的BNRHypnosisView对象并将其加入到UIScrollView对象
+//    BNRHypnosisView *hypnosisView=[[BNRHypnosisView alloc]initWithFrame:bigRect];
+    BNRHypnosisView *hypnosisView=[[BNRHypnosisView alloc]initWithFrame:screenRect];
+    [scrollView addSubview:hypnosisView];
+    
+    //创建第二个大小与屏幕相同的BNRHypnosisView对象并放置在第一个BNRHypnosisView对象的右侧，使其刚好移出屏幕外
+    screenRect.origin.x+=screenRect.size.width;
+    
+    BNRHypnosisView *anotherView=[[BNRHypnosisView alloc]initWithFrame:screenRect];
+    [scrollView addSubview:anotherView];
+    
+    
+    scrollView.contentSize=bigRect.size ;
     
     self.window.backgroundColor=[UIColor whiteColor];
     [self.window makeKeyAndVisible];
