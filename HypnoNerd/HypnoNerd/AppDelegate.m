@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BNRHypnosisViewController.h"
+#import "BNRReminderViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,19 @@
     // Override point for customization after application launch.
     self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen] bounds]];
     BNRHypnosisViewController *hvc=[[BNRHypnosisViewController alloc]init];
-    self.window.rootViewController=hvc;
+    BNRReminderViewController *rvc=[[BNRReminderViewController alloc]init];
+//    NSBundle *appBundle=[NSBundle mainBundle];
+//    BNRReminderViewController *rvc=[[BNRReminderViewController alloc]initWithNibName:@"BNRReminderViewController" bundle:appBundle];
+    
+    UITabBarController *tabBarController=[[UITabBarController alloc]init];
+    tabBarController.viewControllers=@[hvc,rvc];
+    
+    self.window.rootViewController=tabBarController;
+    
+    
+//    self.window.rootViewController=rvc;
+    
+//    self.window.rootViewController=hvc;
     /**
      *如果是自己实现rootViewController
      -(void)setRootViewController:(UIViewController *)viewController{
