@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imX-Jq-YCG">
-                    <rect key="frame" x="105" y="232" width="110" height="30"/>
+                    <rect key="frame" x="105" y="297" width="110" height="30"/>
                     <state key="normal" title="Remind me!">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -25,7 +25,7 @@
                     </connections>
                 </button>
                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ha6-3O-1BZ">
-                    <rect key="frame" x="0.0" y="21" width="320" height="162"/>
+                    <rect key="frame" x="0.0" y="52" width="320" height="162"/>
                     <date key="date" timeIntervalSinceReferenceDate="454224883.44262397">
                         <!--2015-05-25 05:34:43 +0000-->
                     </date>
