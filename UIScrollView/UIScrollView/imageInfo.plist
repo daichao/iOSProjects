@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>0.png</key>
+        <string>iOS组件与框架</string>
+        <key>1.png</key>
+        <string>iOS编程实战</string>
+        <key>2.png</key>
+        <string>Objective-C程序设计</string>
+        <key>3.png</key>
+        <string>OC高级编程内存管理与多线程</string>
+        <key>4.png</key>
+        <string>iOS编程</string>
+        <key>5.png</key>
+        <string>Effective Objective-C</string>
+    </dict>
+</plist>
