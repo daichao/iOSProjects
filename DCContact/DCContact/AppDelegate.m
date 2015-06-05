@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DCContactTableViewController.h"
+#import "DCContactTableViewControllerWithUISearchDisplayController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window=[[UIWindow alloc]initWithFrame:[[UIScreen mainScreen]bounds]];
+    self.window.backgroundColor=[UIColor whiteColor];
+//    DCContactTableViewController *mainController=[[DCContactTableViewController alloc]init];
+    DCContactTableViewControllerWithUISearchDisplayController *mainController=[[DCContactTableViewControllerWithUISearchDisplayController alloc]init];
+    self.window.rootViewController=mainController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

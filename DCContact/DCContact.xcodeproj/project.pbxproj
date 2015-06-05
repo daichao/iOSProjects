@@ -16,6 +16,8 @@
 		A26DC7961B202A7F00E66FF0 /* DCContactTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DC7951B202A7F00E66FF0 /* DCContactTests.m */; };
 		A26DC7A11B202AA200E66FF0 /* DCContact.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DC7A01B202AA200E66FF0 /* DCContact.m */; };
 		A26DC7A41B202CA200E66FF0 /* DCContactGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = A26DC7A31B202CA200E66FF0 /* DCContactGroup.m */; };
+		A28725061B2185500012002A /* DCContactTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28725051B2185500012002A /* DCContactTableViewController.m */; };
+		A287250B1B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.m in Sources */ = {isa = PBXBuildFile; fileRef = A287250A1B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 		A26DC7A01B202AA200E66FF0 /* DCContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContact.m; sourceTree = "<group>"; };
 		A26DC7A21B202CA200E66FF0 /* DCContactGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContactGroup.h; sourceTree = "<group>"; };
 		A26DC7A31B202CA200E66FF0 /* DCContactGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContactGroup.m; sourceTree = "<group>"; };
+		A28725041B2185500012002A /* DCContactTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContactTableViewController.h; sourceTree = "<group>"; };
+		A28725051B2185500012002A /* DCContactTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContactTableViewController.m; sourceTree = "<group>"; };
+		A28725091B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContactTableViewControllerWithUISearchDisplayController.h; sourceTree = "<group>"; };
+		A287250A1B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContactTableViewControllerWithUISearchDisplayController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,14 +93,10 @@
 		A26DC7781B202A7F00E66FF0 /* DCContact */ = {
 			isa = PBXGroup;
 			children = (
-				A26DC79F1B202AA200E66FF0 /* DCContact.h */,
-				A26DC7A01B202AA200E66FF0 /* DCContact.m */,
-				A26DC7A21B202CA200E66FF0 /* DCContactGroup.h */,
-				A26DC7A31B202CA200E66FF0 /* DCContactGroup.m */,
+				A28725081B21856C0012002A /* model */,
+				A28725071B21855F0012002A /* viewController */,
 				A26DC77D1B202A7F00E66FF0 /* AppDelegate.h */,
 				A26DC77E1B202A7F00E66FF0 /* AppDelegate.m */,
-				A26DC7801B202A7F00E66FF0 /* ViewController.h */,
-				A26DC7811B202A7F00E66FF0 /* ViewController.m */,
 				A26DC7831B202A7F00E66FF0 /* Main.storyboard */,
 				A26DC7861B202A7F00E66FF0 /* Images.xcassets */,
 				A26DC7881B202A7F00E66FF0 /* LaunchScreen.xib */,
@@ -127,6 +129,30 @@
 				A26DC7941B202A7F00E66FF0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A28725071B21855F0012002A /* viewController */ = {
+			isa = PBXGroup;
+			children = (
+				A28725041B2185500012002A /* DCContactTableViewController.h */,
+				A28725051B2185500012002A /* DCContactTableViewController.m */,
+				A26DC7801B202A7F00E66FF0 /* ViewController.h */,
+				A26DC7811B202A7F00E66FF0 /* ViewController.m */,
+				A28725091B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.h */,
+				A287250A1B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.m */,
+			);
+			name = viewController;
+			sourceTree = "<group>";
+		};
+		A28725081B21856C0012002A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A26DC79F1B202AA200E66FF0 /* DCContact.h */,
+				A26DC7A01B202AA200E66FF0 /* DCContact.m */,
+				A26DC7A21B202CA200E66FF0 /* DCContactGroup.h */,
+				A26DC7A31B202CA200E66FF0 /* DCContactGroup.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +255,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A287250B1B21A2920012002A /* DCContactTableViewControllerWithUISearchDisplayController.m in Sources */,
 				A26DC7821B202A7F00E66FF0 /* ViewController.m in Sources */,
+				A28725061B2185500012002A /* DCContactTableViewController.m in Sources */,
 				A26DC7A11B202AA200E66FF0 /* DCContact.m in Sources */,
 				A26DC77F1B202A7F00E66FF0 /* AppDelegate.m in Sources */,
 				A26DC77C1B202A7F00E66FF0 /* main.m in Sources */,
@@ -428,6 +456,7 @@
 				A26DC79B1B202A7F00E66FF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A26DC79C1B202A7F00E66FF0 /* Build configuration list for PBXNativeTarget "DCContactTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +465,7 @@
 				A26DC79E1B202A7F00E66FF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

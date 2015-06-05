@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>8B4ACFF2-6FBB-4532-A2FA-4DE15FA3EE5F</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Quiz</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>
 		<string>https://github.com/daichao/iOSProjects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Quiz/Quiz.xcodeproj/project.xcworkspace</string>
+	<string>Quiz/Quiz.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>
