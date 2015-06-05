@@ -7,11 +7,16 @@
 //
 
 #import "ViewController.h"
+#import "DCContact.h"
+#import "DCContactGroup.h"
+#define kContactToolbarHeight 44
 
 @interface ViewController ()<UITableViewDataSource,UITableViewDelegate,UIAlertViewDelegate>{
     UITableView *_tableView;
-    NSMutableArray *_contacts;
-    NSIndexPath *_selectedIndexPath;
+    NSMutableArray *_contacts;//联系人模型
+    NSIndexPath *_selectedIndexPath;//当前选中的组和行
+    UIToolbar *_toolbar;
+    BOOL _isInsert;//记录是点击了插入还是删除按钮
 }
 
 @end
@@ -24,20 +29,22 @@
     [self initData];
     //创建一个分组样式的UITableView
     _tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
-//设置数据源
+    _tableView.contentInset=UIEdgeInsetsMake(kContactToolbarHeight, 0, 0, 0);
+     [self.view addSubview:_tableView];
+    //添加工具栏
+     [self addToolbar];
+    
+    //设置数据源
     _tableView.dataSource=self;
     //设置代理
     _tableView.delegate=self;
     
-    [self.view addSubview:_tableView];
+   
+   
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
+#pragma mark 加载数据
 -(void)initData{
     _contacts=[[NSMutableArray alloc]init];
     DCContact *contact1=[DCContact initWithFirstName:@"Cui" andLastName:@"Kenshin" andPhoneNumber:@"18500131234"];
@@ -76,6 +83,81 @@
     DCContactGroup *group5=[DCContactGroup initWithName:@"Z" andDetail:@"With names beginning with Z" andContacts:[NSMutableArray arrayWithObjects:contact13,contact14,contact15, nil]];
     [_contacts addObject:group5];
     
+}
+
+#pragma mark 添加工具栏
+-(void)addToolbar{
+    CGRect frame=self.view.frame;
+    _toolbar=[[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, kContactToolbarHeight)];
+    [self.view addSubview:_toolbar];
+    UIBarButtonItem *removeButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(remove)];
+    UIBarButtonItem *flexibleButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    UIBarButtonItem *addButton=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add)];
+    NSArray *buttonArray=[NSArray arrayWithObjects:removeButton,flexibleButton,addButton , nil];
+    _toolbar.items=buttonArray;
+}
+
+#pragma mark 删除按钮
+-(void)remove{
+    //直接通过下面的方法设置编辑状态没有动画
+    _isInsert=false;
+    [_tableView setEditing:!_tableView.isEditing animated:true];
+}
+
+#pragma mark 添加按钮
+-(void)add{
+    _isInsert=true;
+    [_tableView setEditing:!_tableView.isEditing animated:true];
+}
+
+#pragma mark 代理-编辑操作(删除或添加)
+-(void)tableView:(UITableView*)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    DCContactGroup *group=_contacts[indexPath.section];
+    DCContact *contact=group.contacts[indexPath.row];
+    
+    if(editingStyle==UITableViewCellEditingStyleDelete){
+        [group.contacts removeObject:contact];
+        //考虑到性能，这里不能使用reloaddata
+        //使用下面的方法既可以局部刷新又有动画效果
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+        //如果当前组中没有数据则移除组刷新整个表格
+        if(group.contacts.count==0){
+            [_contacts removeObject:group];
+            [tableView reloadData];
+        }
+    }
+    else if (editingStyle==UITableViewCellEditingStyleInsert){
+        DCContact *newContact=[[DCContact alloc]init];
+        newContact.firstName=@"first";
+        newContact.lastName=@"last";
+        newContact.phoneNumber=@"12345678901";
+        [group.contacts insertObject:newContact atIndex:indexPath.row];
+        [tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationBottom];
+    }
+}
+
+
+#pragma mark 排序
+//只要实现这个方法在编辑状态右侧就有排序图标
+-(void)tableView:(UITableView*)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    DCContactGroup *sourceGroup=_contacts[sourceIndexPath.section];
+    DCContact *sourceContact=sourceGroup.contacts[sourceIndexPath.row];
+    DCContactGroup *destinationGroup=_contacts[destinationIndexPath.section];
+    
+    [sourceGroup.contacts removeObject:sourceContact];
+    [destinationGroup.contacts insertObject:sourceContact atIndex:destinationIndexPath.row];
+    if(sourceGroup.contacts.count==0){
+        [_contacts removeObject:sourceGroup];
+        [tableView reloadData];
+    }
+}
+
+#pragma  mark 取得当前操作状态 根据不同的状态左侧出现不同的操作按钮
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (_isInsert) {
+        return UITableViewCellEditingStyleInsert;
+    }
+    return UITableViewCellEditingStyleDelete;
 }
 
 
@@ -223,4 +305,6 @@
 -(void)switchValueChange:(UISwitch*)sw{
     NSLog(@"section:%li,switch:%i",sw.tag,sw.on);
 }
+
+
 @end
