@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A28305EA1B2520EB00A008B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A28305E91B2520EB00A008B3 /* main.m */; };
+		A28305ED1B2520EB00A008B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A28305EC1B2520EB00A008B3 /* AppDelegate.m */; };
+		A28305F31B2520EB00A008B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28305F11B2520EB00A008B3 /* Main.storyboard */; };
+		A28305F51B2520EB00A008B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28305F41B2520EB00A008B3 /* Images.xcassets */; };
+		A28305F81B2520EB00A008B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28305F61B2520EB00A008B3 /* LaunchScreen.xib */; };
+		A28306041B2520EB00A008B3 /* DCViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306031B2520EB00A008B3 /* DCViewControllerTests.m */; };
+		A28306111B25342300A008B3 /* DCFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306101B25342300A008B3 /* DCFriendViewController.m */; };
+		A28306141B25368D00A008B3 /* DCQQContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306131B25368D00A008B3 /* DCQQContactViewController.m */; };
+		A28306181B2539A100A008B3 /* DCPublicAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306171B2539A100A008B3 /* DCPublicAccountViewController.m */; };
+		A283061C1B253C0400A008B3 /* bottleTipButtonNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306191B253C0400A008B3 /* bottleTipButtonNormal@2x.png */; };
+		A283061D1B253C0400A008B3 /* ff_IconAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A283061A1B253C0400A008B3 /* ff_IconAdd@2x.png */; };
+		A283061E1B253C0400A008B3 /* tabbar_contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A283061B1B253C0400A008B3 /* tabbar_contacts@2x.png */; };
+		A28306261B253C2400A008B3 /* tabbar_contactsHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A283061F1B253C2400A008B3 /* tabbar_contactsHL@2x.png */; };
+		A28306271B253C2400A008B3 /* tabbar_discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306201B253C2400A008B3 /* tabbar_discover@2x.png */; };
+		A28306281B253C2400A008B3 /* tabbar_discoverHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306211B253C2400A008B3 /* tabbar_discoverHL@2x.png */; };
+		A28306291B253C2400A008B3 /* tabbar_mainframe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306221B253C2400A008B3 /* tabbar_mainframe@2x.png */; };
+		A283062A1B253C2400A008B3 /* tabbar_mainframeHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306231B253C2400A008B3 /* tabbar_mainframeHL@2x.png */; };
+		A283062B1B253C2400A008B3 /* tabbar_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306241B253C2400A008B3 /* tabbar_me@2x.png */; };
+		A283062C1B253C2400A008B3 /* tabbar_meHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A28306251B253C2400A008B3 /* tabbar_meHL@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A28305FE1B2520EB00A008B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28305DC1B2520EB00A008B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A28305E31B2520EB00A008B3;
+			remoteInfo = DCViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A28305E41B2520EB00A008B3 /* DCViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28305E81B2520EB00A008B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28305E91B2520EB00A008B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A28305EB1B2520EB00A008B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A28305EC1B2520EB00A008B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A28305F21B2520EB00A008B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A28305F41B2520EB00A008B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A28305F71B2520EB00A008B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A28305FD1B2520EB00A008B3 /* DCViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28306021B2520EB00A008B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28306031B2520EB00A008B3 /* DCViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCViewControllerTests.m; sourceTree = "<group>"; };
+		A283060F1B25342300A008B3 /* DCFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFriendViewController.h; sourceTree = "<group>"; };
+		A28306101B25342300A008B3 /* DCFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFriendViewController.m; sourceTree = "<group>"; };
+		A28306121B25368D00A008B3 /* DCQQContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCQQContactViewController.h; sourceTree = "<group>"; };
+		A28306131B25368D00A008B3 /* DCQQContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCQQContactViewController.m; sourceTree = "<group>"; };
+		A28306161B2539A100A008B3 /* DCPublicAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCPublicAccountViewController.h; sourceTree = "<group>"; };
+		A28306171B2539A100A008B3 /* DCPublicAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCPublicAccountViewController.m; sourceTree = "<group>"; };
+		A28306191B253C0400A008B3 /* bottleTipButtonNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleTipButtonNormal@2x.png"; sourceTree = "<group>"; };
+		A283061A1B253C0400A008B3 /* ff_IconAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_IconAdd@2x.png"; sourceTree = "<group>"; };
+		A283061B1B253C0400A008B3 /* tabbar_contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contacts@2x.png"; sourceTree = "<group>"; };
+		A283061F1B253C2400A008B3 /* tabbar_contactsHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contactsHL@2x.png"; sourceTree = "<group>"; };
+		A28306201B253C2400A008B3 /* tabbar_discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover@2x.png"; sourceTree = "<group>"; };
+		A28306211B253C2400A008B3 /* tabbar_discoverHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discoverHL@2x.png"; sourceTree = "<group>"; };
+		A28306221B253C2400A008B3 /* tabbar_mainframe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_mainframe@2x.png"; sourceTree = "<group>"; };
+		A28306231B253C2400A008B3 /* tabbar_mainframeHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_mainframeHL@2x.png"; sourceTree = "<group>"; };
+		A28306241B253C2400A008B3 /* tabbar_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_me@2x.png"; sourceTree = "<group>"; };
+		A28306251B253C2400A008B3 /* tabbar_meHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_meHL@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A28305E11B2520EB00A008B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28305FA1B2520EB00A008B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A28305DB1B2520EB00A008B3 = {
+			isa = PBXGroup;
+			children = (
+				A28305E61B2520EB00A008B3 /* DCViewController */,
+				A28306001B2520EB00A008B3 /* DCViewControllerTests */,
+				A28305E51B2520EB00A008B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A28305E51B2520EB00A008B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A28305E41B2520EB00A008B3 /* DCViewController.app */,
+				A28305FD1B2520EB00A008B3 /* DCViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A28305E61B2520EB00A008B3 /* DCViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A283061F1B253C2400A008B3 /* tabbar_contactsHL@2x.png */,
+				A28306201B253C2400A008B3 /* tabbar_discover@2x.png */,
+				A28306211B253C2400A008B3 /* tabbar_discoverHL@2x.png */,
+				A28306221B253C2400A008B3 /* tabbar_mainframe@2x.png */,
+				A28306231B253C2400A008B3 /* tabbar_mainframeHL@2x.png */,
+				A28306241B253C2400A008B3 /* tabbar_me@2x.png */,
+				A28306251B253C2400A008B3 /* tabbar_meHL@2x.png */,
+				A28306191B253C0400A008B3 /* bottleTipButtonNormal@2x.png */,
+				A283061A1B253C0400A008B3 /* ff_IconAdd@2x.png */,
+				A283061B1B253C0400A008B3 /* tabbar_contacts@2x.png */,
+				A283060E1B25269400A008B3 /* TabBarController */,
+				A283060D1B25268100A008B3 /* NavigationController */,
+				A28305EB1B2520EB00A008B3 /* AppDelegate.h */,
+				A28305EC1B2520EB00A008B3 /* AppDelegate.m */,
+				A28305F11B2520EB00A008B3 /* Main.storyboard */,
+				A28305F41B2520EB00A008B3 /* Images.xcassets */,
+				A28305F61B2520EB00A008B3 /* LaunchScreen.xib */,
+				A28305E71B2520EB00A008B3 /* Supporting Files */,
+			);
+			path = DCViewController;
+			sourceTree = "<group>";
+		};
+		A28305E71B2520EB00A008B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28305E81B2520EB00A008B3 /* Info.plist */,
+				A28305E91B2520EB00A008B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A28306001B2520EB00A008B3 /* DCViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A28306031B2520EB00A008B3 /* DCViewControllerTests.m */,
+				A28306011B2520EB00A008B3 /* Supporting Files */,
+			);
+			path = DCViewControllerTests;
+			sourceTree = "<group>";
+		};
+		A28306011B2520EB00A008B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28306021B2520EB00A008B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A283060D1B25268100A008B3 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A283060F1B25342300A008B3 /* DCFriendViewController.h */,
+				A28306101B25342300A008B3 /* DCFriendViewController.m */,
+				A28306121B25368D00A008B3 /* DCQQContactViewController.h */,
+				A28306131B25368D00A008B3 /* DCQQContactViewController.m */,
+				A28306161B2539A100A008B3 /* DCPublicAccountViewController.h */,
+				A28306171B2539A100A008B3 /* DCPublicAccountViewController.m */,
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+		A283060E1B25269400A008B3 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A28305E31B2520EB00A008B3 /* DCViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A28306071B2520EB00A008B3 /* Build configuration list for PBXNativeTarget "DCViewController" */;
+			buildPhases = (
+				A28305E01B2520EB00A008B3 /* Sources */,
+				A28305E11B2520EB00A008B3 /* Frameworks */,
+				A28305E21B2520EB00A008B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCViewController;
+			productName = DCViewController;
+			productReference = A28305E41B2520EB00A008B3 /* DCViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A28305FC1B2520EB00A008B3 /* DCViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A283060A1B2520EB00A008B3 /* Build configuration list for PBXNativeTarget "DCViewControllerTests" */;
+			buildPhases = (
+				A28305F91B2520EB00A008B3 /* Sources */,
+				A28305FA1B2520EB00A008B3 /* Frameworks */,
+				A28305FB1B2520EB00A008B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A28305FF1B2520EB00A008B3 /* PBXTargetDependency */,
+			);
+			name = DCViewControllerTests;
+			productName = DCViewControllerTests;
+			productReference = A28305FD1B2520EB00A008B3 /* DCViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A28305DC1B2520EB00A008B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = bokeadmin;
+				TargetAttributes = {
+					A28305E31B2520EB00A008B3 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					A28305FC1B2520EB00A008B3 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = A28305E31B2520EB00A008B3;
+					};
+				};
+			};
+			buildConfigurationList = A28305DF1B2520EB00A008B3 /* Build configuration list for PBXProject "DCViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A28305DB1B2520EB00A008B3;
+			productRefGroup = A28305E51B2520EB00A008B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A28305E31B2520EB00A008B3 /* DCViewController */,
+				A28305FC1B2520EB00A008B3 /* DCViewControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A28305E21B2520EB00A008B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28305F31B2520EB00A008B3 /* Main.storyboard in Resources */,
+				A28306291B253C2400A008B3 /* tabbar_mainframe@2x.png in Resources */,
+				A283062C1B253C2400A008B3 /* tabbar_meHL@2x.png in Resources */,
+				A283062B1B253C2400A008B3 /* tabbar_me@2x.png in Resources */,
+				A283061C1B253C0400A008B3 /* bottleTipButtonNormal@2x.png in Resources */,
+				A283062A1B253C2400A008B3 /* tabbar_mainframeHL@2x.png in Resources */,
+				A28305F81B2520EB00A008B3 /* LaunchScreen.xib in Resources */,
+				A28305F51B2520EB00A008B3 /* Images.xcassets in Resources */,
+				A28306261B253C2400A008B3 /* tabbar_contactsHL@2x.png in Resources */,
+				A28306281B253C2400A008B3 /* tabbar_discoverHL@2x.png in Resources */,
+				A28306271B253C2400A008B3 /* tabbar_discover@2x.png in Resources */,
+				A283061D1B253C0400A008B3 /* ff_IconAdd@2x.png in Resources */,
+				A283061E1B253C0400A008B3 /* tabbar_contacts@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28305FB1B2520EB00A008B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A28305E01B2520EB00A008B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28305ED1B2520EB00A008B3 /* AppDelegate.m in Sources */,
+				A28306111B25342300A008B3 /* DCFriendViewController.m in Sources */,
+				A28306141B25368D00A008B3 /* DCQQContactViewController.m in Sources */,
+				A28305EA1B2520EB00A008B3 /* main.m in Sources */,
+				A28306181B2539A100A008B3 /* DCPublicAccountViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A28305F91B2520EB00A008B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28306041B2520EB00A008B3 /* DCViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A28305FF1B2520EB00A008B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A28305E31B2520EB00A008B3 /* DCViewController */;
+			targetProxy = A28305FE1B2520EB00A008B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A28305F11B2520EB00A008B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A28305F21B2520EB00A008B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A28305F61B2520EB00A008B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A28305F71B2520EB00A008B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A28306051B2520EB00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A28306061B2520EB00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A28306081B2520EB00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A28306091B2520EB00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A283060B1B2520EB00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCViewController.app/DCViewController";
+			};
+			name = Debug;
+		};
+		A283060C1B2520EB00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCViewController.app/DCViewController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A28305DF1B2520EB00A008B3 /* Build configuration list for PBXProject "DCViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28306051B2520EB00A008B3 /* Debug */,
+				A28306061B2520EB00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A28306071B2520EB00A008B3 /* Build configuration list for PBXNativeTarget "DCViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28306081B2520EB00A008B3 /* Debug */,
+				A28306091B2520EB00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A283060A1B2520EB00A008B3 /* Build configuration list for PBXNativeTarget "DCViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A283060B1B2520EB00A008B3 /* Debug */,
+				A283060C1B2520EB00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A28305DC1B2520EB00A008B3 /* Project object */;
+}

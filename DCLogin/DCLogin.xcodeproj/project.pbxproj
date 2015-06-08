@@ -1,0 +1,467 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A283066E1B25620C00A008B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A283066D1B25620C00A008B3 /* main.m */; };
+		A28306711B25620C00A008B3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306701B25620C00A008B3 /* AppDelegate.m */; };
+		A28306771B25620C00A008B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A28306751B25620C00A008B3 /* Main.storyboard */; };
+		A28306791B25620D00A008B3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28306781B25620D00A008B3 /* Images.xcassets */; };
+		A283067C1B25620D00A008B3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A283067A1B25620D00A008B3 /* LaunchScreen.xib */; };
+		A28306881B25620D00A008B3 /* DCLoginTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306871B25620D00A008B3 /* DCLoginTests.m */; };
+		A28306931B25622E00A008B3 /* DCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306921B25622E00A008B3 /* DCLoginViewController.m */; };
+		A28306981B25655400A008B3 /* DCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28306971B25655400A008B3 /* DCMainViewController.m */; };
+		A283069C1B2572AD00A008B3 /* DCMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A283069B1B2572AD00A008B3 /* DCMeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A28306821B25620D00A008B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A28306601B25620C00A008B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A28306671B25620C00A008B3;
+			remoteInfo = DCLogin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A28306681B25620C00A008B3 /* DCLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A283066C1B25620C00A008B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A283066D1B25620C00A008B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A283066F1B25620C00A008B3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A28306701B25620C00A008B3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A28306761B25620C00A008B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A28306781B25620D00A008B3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A283067B1B25620D00A008B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A28306811B25620D00A008B3 /* DCLoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCLoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A28306861B25620D00A008B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A28306871B25620D00A008B3 /* DCLoginTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCLoginTests.m; sourceTree = "<group>"; };
+		A28306911B25622E00A008B3 /* DCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCLoginViewController.h; sourceTree = "<group>"; };
+		A28306921B25622E00A008B3 /* DCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCLoginViewController.m; sourceTree = "<group>"; };
+		A28306961B25655400A008B3 /* DCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMainViewController.h; sourceTree = "<group>"; };
+		A28306971B25655400A008B3 /* DCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMainViewController.m; sourceTree = "<group>"; };
+		A283069A1B2572AD00A008B3 /* DCMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCMeViewController.h; sourceTree = "<group>"; };
+		A283069B1B2572AD00A008B3 /* DCMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCMeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A28306651B25620C00A008B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A283067E1B25620D00A008B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A283065F1B25620C00A008B3 = {
+			isa = PBXGroup;
+			children = (
+				A283066A1B25620C00A008B3 /* DCLogin */,
+				A28306841B25620D00A008B3 /* DCLoginTests */,
+				A28306691B25620C00A008B3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A28306691B25620C00A008B3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A28306681B25620C00A008B3 /* DCLogin.app */,
+				A28306811B25620D00A008B3 /* DCLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A283066A1B25620C00A008B3 /* DCLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A28306991B25729A00A008B3 /* MeView */,
+				A28306951B25653A00A008B3 /* MainView */,
+				A28306941B25652800A008B3 /* Login */,
+				A283066F1B25620C00A008B3 /* AppDelegate.h */,
+				A28306701B25620C00A008B3 /* AppDelegate.m */,
+				A28306751B25620C00A008B3 /* Main.storyboard */,
+				A28306781B25620D00A008B3 /* Images.xcassets */,
+				A283067A1B25620D00A008B3 /* LaunchScreen.xib */,
+				A283066B1B25620C00A008B3 /* Supporting Files */,
+			);
+			path = DCLogin;
+			sourceTree = "<group>";
+		};
+		A283066B1B25620C00A008B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A283066C1B25620C00A008B3 /* Info.plist */,
+				A283066D1B25620C00A008B3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A28306841B25620D00A008B3 /* DCLoginTests */ = {
+			isa = PBXGroup;
+			children = (
+				A28306871B25620D00A008B3 /* DCLoginTests.m */,
+				A28306851B25620D00A008B3 /* Supporting Files */,
+			);
+			path = DCLoginTests;
+			sourceTree = "<group>";
+		};
+		A28306851B25620D00A008B3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A28306861B25620D00A008B3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A28306941B25652800A008B3 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A28306911B25622E00A008B3 /* DCLoginViewController.h */,
+				A28306921B25622E00A008B3 /* DCLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		A28306951B25653A00A008B3 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				A28306961B25655400A008B3 /* DCMainViewController.h */,
+				A28306971B25655400A008B3 /* DCMainViewController.m */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		A28306991B25729A00A008B3 /* MeView */ = {
+			isa = PBXGroup;
+			children = (
+				A283069A1B2572AD00A008B3 /* DCMeViewController.h */,
+				A283069B1B2572AD00A008B3 /* DCMeViewController.m */,
+			);
+			name = MeView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A28306671B25620C00A008B3 /* DCLogin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A283068B1B25620D00A008B3 /* Build configuration list for PBXNativeTarget "DCLogin" */;
+			buildPhases = (
+				A28306641B25620C00A008B3 /* Sources */,
+				A28306651B25620C00A008B3 /* Frameworks */,
+				A28306661B25620C00A008B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCLogin;
+			productName = DCLogin;
+			productReference = A28306681B25620C00A008B3 /* DCLogin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A28306801B25620D00A008B3 /* DCLoginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A283068E1B25620D00A008B3 /* Build configuration list for PBXNativeTarget "DCLoginTests" */;
+			buildPhases = (
+				A283067D1B25620D00A008B3 /* Sources */,
+				A283067E1B25620D00A008B3 /* Frameworks */,
+				A283067F1B25620D00A008B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A28306831B25620D00A008B3 /* PBXTargetDependency */,
+			);
+			name = DCLoginTests;
+			productName = DCLoginTests;
+			productReference = A28306811B25620D00A008B3 /* DCLoginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A28306601B25620C00A008B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = bokeadmin;
+				TargetAttributes = {
+					A28306671B25620C00A008B3 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					A28306801B25620D00A008B3 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = A28306671B25620C00A008B3;
+					};
+				};
+			};
+			buildConfigurationList = A28306631B25620C00A008B3 /* Build configuration list for PBXProject "DCLogin" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A283065F1B25620C00A008B3;
+			productRefGroup = A28306691B25620C00A008B3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A28306671B25620C00A008B3 /* DCLogin */,
+				A28306801B25620D00A008B3 /* DCLoginTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A28306661B25620C00A008B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28306771B25620C00A008B3 /* Main.storyboard in Resources */,
+				A283067C1B25620D00A008B3 /* LaunchScreen.xib in Resources */,
+				A28306791B25620D00A008B3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A283067F1B25620D00A008B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A28306641B25620C00A008B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28306981B25655400A008B3 /* DCMainViewController.m in Sources */,
+				A283069C1B2572AD00A008B3 /* DCMeViewController.m in Sources */,
+				A28306711B25620C00A008B3 /* AppDelegate.m in Sources */,
+				A283066E1B25620C00A008B3 /* main.m in Sources */,
+				A28306931B25622E00A008B3 /* DCLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A283067D1B25620D00A008B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A28306881B25620D00A008B3 /* DCLoginTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A28306831B25620D00A008B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A28306671B25620C00A008B3 /* DCLogin */;
+			targetProxy = A28306821B25620D00A008B3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A28306751B25620C00A008B3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A28306761B25620C00A008B3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A283067A1B25620D00A008B3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A283067B1B25620D00A008B3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A28306891B25620D00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A283068A1B25620D00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A283068C1B25620D00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A283068D1B25620D00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCLogin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A283068F1B25620D00A008B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCLogin.app/DCLogin";
+			};
+			name = Debug;
+		};
+		A28306901B25620D00A008B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCLoginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCLogin.app/DCLogin";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A28306631B25620C00A008B3 /* Build configuration list for PBXProject "DCLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A28306891B25620D00A008B3 /* Debug */,
+				A283068A1B25620D00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A283068B1B25620D00A008B3 /* Build configuration list for PBXNativeTarget "DCLogin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A283068C1B25620D00A008B3 /* Debug */,
+				A283068D1B25620D00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A283068E1B25620D00A008B3 /* Build configuration list for PBXNativeTarget "DCLoginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A283068F1B25620D00A008B3 /* Debug */,
+				A28306901B25620D00A008B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A28306601B25620C00A008B3 /* Project object */;
+}
