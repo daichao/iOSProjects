@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DCMainViewControllerWithGCD.h"
+#import "DCViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -20,7 +21,8 @@
     _window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor=[UIColor whiteColor];
 //    DCMainViewController *main=[[DCMainViewController alloc]init];
-    DCMainViewControllerWithGCD *main=[[DCMainViewControllerWithGCD alloc]init];
+//    DCMainViewControllerWithGCD *main=[[DCMainViewControllerWithGCD alloc]init];
+    DCViewController *main=[[DCViewController alloc]init];
     _window.rootViewController=main;
     [_window makeKeyAndVisible ];
     return YES;

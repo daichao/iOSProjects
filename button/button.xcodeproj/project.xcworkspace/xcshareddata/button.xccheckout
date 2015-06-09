@@ -5,16 +5,16 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>53ED8771-D660-4BBD-8666-DE2113470622</string>
+	<string>74EEB9AD-84F1-4500-AD9C-2AA369BE3A2E</string>
 	<key>IDESourceControlProjectName</key>
-	<string>DCThread</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>
 		<string>https://github.com/daichao/iOSProjects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DCThread/DCThread.xcodeproj</string>
+	<string>button/button.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>
