@@ -1,0 +1,491 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A2B22B6D1B27C740001632AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B6C1B27C740001632AA /* main.m */; };
+		A2B22B701B27C740001632AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B6F1B27C740001632AA /* AppDelegate.m */; };
+		A2B22B731B27C740001632AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B721B27C740001632AA /* ViewController.m */; };
+		A2B22B761B27C740001632AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2B22B741B27C740001632AA /* Main.storyboard */; };
+		A2B22B781B27C740001632AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2B22B771B27C740001632AA /* Images.xcassets */; };
+		A2B22B7B1B27C740001632AA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2B22B791B27C740001632AA /* LaunchScreen.xib */; };
+		A2B22B871B27C740001632AA /* DCNetWorkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B861B27C740001632AA /* DCNetWorkTests.m */; };
+		A2B22B941B280F4F001632AA /* DCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B931B280F4F001632AA /* DCViewController.m */; };
+		A2B22B981B281FAD001632AA /* DCFileUPLOADViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2B22B971B281FAD001632AA /* DCFileUPLOADViewController.m */; };
+		A2B22B9B1B2820B5001632AA /* defaultAvatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2B22B991B2820B5001632AA /* defaultAvatar.jpg */; };
+		A2B22B9C1B2820B5001632AA /* pic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A2B22B9A1B2820B5001632AA /* pic.jpg */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2B22B811B27C740001632AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2B22B5F1B27C740001632AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2B22B661B27C740001632AA;
+			remoteInfo = DCNetWork;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A2B22B671B27C740001632AA /* DCNetWork.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCNetWork.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B22B6B1B27C740001632AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B22B6C1B27C740001632AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A2B22B6E1B27C740001632AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A2B22B6F1B27C740001632AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A2B22B711B27C740001632AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A2B22B721B27C740001632AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A2B22B751B27C740001632AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A2B22B771B27C740001632AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A2B22B7A1B27C740001632AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A2B22B801B27C740001632AA /* DCNetWorkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCNetWorkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2B22B851B27C740001632AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2B22B861B27C740001632AA /* DCNetWorkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCNetWorkTests.m; sourceTree = "<group>"; };
+		A2B22B921B280F4F001632AA /* DCViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCViewController.h; sourceTree = "<group>"; };
+		A2B22B931B280F4F001632AA /* DCViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCViewController.m; sourceTree = "<group>"; };
+		A2B22B961B281FAD001632AA /* DCFileUPLOADViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCFileUPLOADViewController.h; sourceTree = "<group>"; };
+		A2B22B971B281FAD001632AA /* DCFileUPLOADViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCFileUPLOADViewController.m; sourceTree = "<group>"; };
+		A2B22B991B2820B5001632AA /* defaultAvatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = defaultAvatar.jpg; sourceTree = "<group>"; };
+		A2B22B9A1B2820B5001632AA /* pic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pic.jpg; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A2B22B641B27C740001632AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B22B7D1B27C740001632AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A2B22B5E1B27C740001632AA = {
+			isa = PBXGroup;
+			children = (
+				A2B22B691B27C740001632AA /* DCNetWork */,
+				A2B22B831B27C740001632AA /* DCNetWorkTests */,
+				A2B22B681B27C740001632AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A2B22B681B27C740001632AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B671B27C740001632AA /* DCNetWork.app */,
+				A2B22B801B27C740001632AA /* DCNetWorkTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A2B22B691B27C740001632AA /* DCNetWork */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B9E1B2822F0001632AA /* WEB请求和响应 */,
+				A2B22B9D1B2822DB001632AA /* NSURLSession */,
+				A2B22B6E1B27C740001632AA /* AppDelegate.h */,
+				A2B22B6F1B27C740001632AA /* AppDelegate.m */,
+				A2B22B741B27C740001632AA /* Main.storyboard */,
+				A2B22B771B27C740001632AA /* Images.xcassets */,
+				A2B22B791B27C740001632AA /* LaunchScreen.xib */,
+				A2B22B6A1B27C740001632AA /* Supporting Files */,
+			);
+			path = DCNetWork;
+			sourceTree = "<group>";
+		};
+		A2B22B6A1B27C740001632AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B6B1B27C740001632AA /* Info.plist */,
+				A2B22B6C1B27C740001632AA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2B22B831B27C740001632AA /* DCNetWorkTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B861B27C740001632AA /* DCNetWorkTests.m */,
+				A2B22B841B27C740001632AA /* Supporting Files */,
+			);
+			path = DCNetWorkTests;
+			sourceTree = "<group>";
+		};
+		A2B22B841B27C740001632AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B851B27C740001632AA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A2B22B901B280F0C001632AA /* 代理方式下载(不推荐) */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B711B27C740001632AA /* ViewController.h */,
+				A2B22B721B27C740001632AA /* ViewController.m */,
+			);
+			name = "代理方式下载(不推荐)";
+			sourceTree = "<group>";
+		};
+		A2B22B911B280F3F001632AA /* HEAD请求分段下载 */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B921B280F4F001632AA /* DCViewController.h */,
+				A2B22B931B280F4F001632AA /* DCViewController.m */,
+			);
+			name = "HEAD请求分段下载";
+			sourceTree = "<group>";
+		};
+		A2B22B951B281F7C001632AA /* 文件上传 */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B991B2820B5001632AA /* defaultAvatar.jpg */,
+				A2B22B9A1B2820B5001632AA /* pic.jpg */,
+				A2B22B961B281FAD001632AA /* DCFileUPLOADViewController.h */,
+				A2B22B971B281FAD001632AA /* DCFileUPLOADViewController.m */,
+			);
+			name = "文件上传";
+			sourceTree = "<group>";
+		};
+		A2B22B9D1B2822DB001632AA /* NSURLSession */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NSURLSession;
+			sourceTree = "<group>";
+		};
+		A2B22B9E1B2822F0001632AA /* WEB请求和响应 */ = {
+			isa = PBXGroup;
+			children = (
+				A2B22B951B281F7C001632AA /* 文件上传 */,
+				A2B22B911B280F3F001632AA /* HEAD请求分段下载 */,
+				A2B22B901B280F0C001632AA /* 代理方式下载(不推荐) */,
+			);
+			name = "WEB请求和响应";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A2B22B661B27C740001632AA /* DCNetWork */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B22B8A1B27C740001632AA /* Build configuration list for PBXNativeTarget "DCNetWork" */;
+			buildPhases = (
+				A2B22B631B27C740001632AA /* Sources */,
+				A2B22B641B27C740001632AA /* Frameworks */,
+				A2B22B651B27C740001632AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCNetWork;
+			productName = DCNetWork;
+			productReference = A2B22B671B27C740001632AA /* DCNetWork.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A2B22B7F1B27C740001632AA /* DCNetWorkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2B22B8D1B27C740001632AA /* Build configuration list for PBXNativeTarget "DCNetWorkTests" */;
+			buildPhases = (
+				A2B22B7C1B27C740001632AA /* Sources */,
+				A2B22B7D1B27C740001632AA /* Frameworks */,
+				A2B22B7E1B27C740001632AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2B22B821B27C740001632AA /* PBXTargetDependency */,
+			);
+			name = DCNetWorkTests;
+			productName = DCNetWorkTests;
+			productReference = A2B22B801B27C740001632AA /* DCNetWorkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A2B22B5F1B27C740001632AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = bokeadmin;
+				TargetAttributes = {
+					A2B22B661B27C740001632AA = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					A2B22B7F1B27C740001632AA = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = A2B22B661B27C740001632AA;
+					};
+				};
+			};
+			buildConfigurationList = A2B22B621B27C740001632AA /* Build configuration list for PBXProject "DCNetWork" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A2B22B5E1B27C740001632AA;
+			productRefGroup = A2B22B681B27C740001632AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A2B22B661B27C740001632AA /* DCNetWork */,
+				A2B22B7F1B27C740001632AA /* DCNetWorkTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A2B22B651B27C740001632AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B22B9B1B2820B5001632AA /* defaultAvatar.jpg in Resources */,
+				A2B22B761B27C740001632AA /* Main.storyboard in Resources */,
+				A2B22B7B1B27C740001632AA /* LaunchScreen.xib in Resources */,
+				A2B22B781B27C740001632AA /* Images.xcassets in Resources */,
+				A2B22B9C1B2820B5001632AA /* pic.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B22B7E1B27C740001632AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A2B22B631B27C740001632AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B22B731B27C740001632AA /* ViewController.m in Sources */,
+				A2B22B701B27C740001632AA /* AppDelegate.m in Sources */,
+				A2B22B6D1B27C740001632AA /* main.m in Sources */,
+				A2B22B981B281FAD001632AA /* DCFileUPLOADViewController.m in Sources */,
+				A2B22B941B280F4F001632AA /* DCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A2B22B7C1B27C740001632AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2B22B871B27C740001632AA /* DCNetWorkTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A2B22B821B27C740001632AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2B22B661B27C740001632AA /* DCNetWork */;
+			targetProxy = A2B22B811B27C740001632AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A2B22B741B27C740001632AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2B22B751B27C740001632AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A2B22B791B27C740001632AA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A2B22B7A1B27C740001632AA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A2B22B881B27C740001632AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A2B22B891B27C740001632AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2B22B8B1B27C740001632AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCNetWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A2B22B8C1B27C740001632AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCNetWork/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A2B22B8E1B27C740001632AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCNetWorkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCNetWork.app/DCNetWork";
+			};
+			name = Debug;
+		};
+		A2B22B8F1B27C740001632AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCNetWorkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCNetWork.app/DCNetWork";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A2B22B621B27C740001632AA /* Build configuration list for PBXProject "DCNetWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B22B881B27C740001632AA /* Debug */,
+				A2B22B891B27C740001632AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A2B22B8A1B27C740001632AA /* Build configuration list for PBXNativeTarget "DCNetWork" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B22B8B1B27C740001632AA /* Debug */,
+				A2B22B8C1B27C740001632AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A2B22B8D1B27C740001632AA /* Build configuration list for PBXNativeTarget "DCNetWorkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2B22B8E1B27C740001632AA /* Debug */,
+				A2B22B8F1B27C740001632AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A2B22B5F1B27C740001632AA /* Project object */;
+}
