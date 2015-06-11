@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>E9937BE9-71F3-4C78-8A25-370ABAEACAD8</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>DCViewController</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>
 		<string>https://github.com/daichao/iOSProjects.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DCViewController/DCViewController.xcodeproj/project.xcworkspace</string>
+	<string>DCViewController/DCViewController.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>5EF1DE9EAD41A107A3066991661C32ED7253B3CC</key>

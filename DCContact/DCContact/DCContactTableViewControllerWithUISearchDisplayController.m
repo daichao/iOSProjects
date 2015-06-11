@@ -17,7 +17,7 @@
     UISearchDisplayController *_searchDisplayController;//在ios8.0以后就替代了UISearchDisplayController
     NSMutableArray *_contacts;//联系人模型
     NSMutableArray *_searchContacts;//符合条件的搜索联系人
-    
+
     
 }
 

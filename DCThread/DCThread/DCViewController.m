@@ -4,7 +4,7 @@
 //
 //  Created by bokeadmin on 15/6/9.
 //  Copyright (c) 2015年 bokeadmin. All rights reserved.
-//
+//控制线程通信
 
 #import "DCViewController.h"
 #define ROW_COUNT 5
@@ -68,6 +68,7 @@
 #pragma mark 创建图片
 -(void)createImageName{
     [_condition lock];
+    //如果当前已经有图片则不再创建，线程处于等待状态
     if(_imageNames.count>0){
         NSLog(@"createImageName wait,current:%i",_currentIndex);
         [_condition wait];
@@ -77,6 +78,7 @@
         [_imageNames addObject:[NSString stringWithFormat:@"http://images.cnblogs.com/cnblogs_com/kenshincui/613474/o_%i.jpg",_currentIndex++]];
          [_condition signal];
     }
+    //创建完图片则发出信号唤醒其他等待线程
     [_condition unlock];
 }
 
@@ -94,7 +96,9 @@
 }
 #pragma mark 加载图片并将图片显示到界面
 -(void)loadAnUpdateImageWithIndex:(int)index{
+    //请求数据
     NSData *data=[self requestData:index];
+    //更新UI界面，此处调用了GCD主线程队列的方法
     dispatch_queue_t mainQueue=dispatch_get_main_queue();
     dispatch_sync(mainQueue, ^{
         UIImage *image=[UIImage imageWithData:data];
@@ -109,6 +113,46 @@
 #pragma mark 加载图片
 -(void)loadImage:(NSNumber *)index{
     int i=[index intValue];
+    //加锁
+    [_condition lock];
+    //如果当前有图片资源则加载，否则等待
+    if(_imageNames.count>0){
+        NSLog(@"loadImage work,index is %i",i);
+        [self loadAnUpdateImageWithIndex:i];
+        [_condition broadcast];
+    }else{
+        NSLog(@"loadImage wait,index is %i",i);
+        NSLog(@"%@",[NSThread currentThread]);
+        //线程等待
+        [_condition wait];
+        NSLog(@"loadImage resore,index is %i",i);
+        //一旦创建完图片立即加载
+        [self loadAnUpdateImageWithIndex:i];
+        
+    }
+    //解锁
+    [_condition unlock];
+}
+
+#pragma mark UI调用方法
+#pragma mark 异步创建一张图片链接
+-(void)createImageWithMultiThread{
+    dispatch_queue_t globalQueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    //创建图片链接
+    dispatch_async(globalQueue, ^{
+        [self createImageName];
+    });
+}
+#pragma mark 多线程下载图片
+-(void)loadImageWithMultiThread{
+    int count=ROW_COUNT*COLUMN_COUNT;
+    dispatch_queue_t globalQueue=dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
+    for(int i=0;i<count;++i) {
+        //加载图片
+        dispatch_async(globalQueue, ^{
+            [self loadImage:[NSNumber numberWithInt:i]];
+        });
+    }
 }
 @end

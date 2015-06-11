@@ -24,6 +24,7 @@
     NSLog(@"UIView start touch...");
 }
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    
     NSLog(@"UIView moving...");
 }
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
