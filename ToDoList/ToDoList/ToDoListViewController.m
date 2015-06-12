@@ -37,7 +37,7 @@
         [self.tableView reloadData];
     }
 }
-
+#pragma mark初始化值
 -(void)loadInitialData{
     ToDoItem *item1=[[ToDoItem alloc]init];
     item1.itemName=@"Buy Milk";
@@ -67,14 +67,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
     // Return the number of rows in the section.
     return [self.toDoItems count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     static NSString *CellIdentifier=@"ListPrototypeCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     

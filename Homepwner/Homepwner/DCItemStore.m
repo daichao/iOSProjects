@@ -45,4 +45,15 @@
     [self.privateItems addObject:item];
     return item;
 }
+-(void)removeItem:(BNRItem *)item{
+    [self.privateItems removeObjectIdenticalTo:item];//该方法只会移除数组所保存的那些和传入对象指针完全相同的指针。
+}
+-(void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex{
+    if (fromIndex==toIndex) {
+        return;
+    }
+    BNRItem *item=self.privateItems[fromIndex];
+    [self.privateItems removeObjectAtIndex:fromIndex];
+    [self.privateItems insertObject:item atIndex:toIndex];
+}
 @end
