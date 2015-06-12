@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A20C01A41B2A86DA0019A462 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20C01A31B2A86DA0019A462 /* HeaderView.xib */; };
+		A20C01AB1B2AB5EB0019A462 /* DCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */; };
+		A20C01AC1B2AB5EB0019A462 /* DCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */; };
 		D1F0694B1B29AFDD004A2B44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0694A1B29AFDD004A2B44 /* main.m */; };
 		D1F0694E1B29AFDD004A2B44 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F0694D1B29AFDD004A2B44 /* AppDelegate.m */; };
 		D1F069511B29AFDD004A2B44 /* DCItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F069501B29AFDD004A2B44 /* DCItemViewController.m */; };
@@ -30,6 +32,9 @@
 
 /* Begin PBXFileReference section */
 		A20C01A31B2A86DA0019A462 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		A20C01A81B2AB5EB0019A462 /* DCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCDetailViewController.h; path = ../DCDetailViewController.h; sourceTree = "<group>"; };
+		A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCDetailViewController.m; path = ../DCDetailViewController.m; sourceTree = "<group>"; };
+		A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DCDetailViewController.xib; path = ../DCDetailViewController.xib; sourceTree = "<group>"; };
 		D1F069451B29AFDC004A2B44 /* Homepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Homepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1F069491B29AFDD004A2B44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1F0694A1B29AFDD004A2B44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -87,6 +92,9 @@
 		D1F069471B29AFDC004A2B44 /* Homepwner */ = {
 			isa = PBXGroup;
 			children = (
+				A20C01A81B2AB5EB0019A462 /* DCDetailViewController.h */,
+				A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */,
+				A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */,
 				D1F0696E1B29B67B004A2B44 /* BNRItem.h */,
 				D1F0696F1B29B67B004A2B44 /* BNRItem.m */,
 				D1F069711B29B723004A2B44 /* DCItemStore.h */,
@@ -209,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A20C01AC1B2AB5EB0019A462 /* DCDetailViewController.xib in Resources */,
 				D1F069591B29AFDD004A2B44 /* LaunchScreen.xib in Resources */,
 				D1F069561B29AFDD004A2B44 /* Images.xcassets in Resources */,
 				A20C01A41B2A86DA0019A462 /* HeaderView.xib in Resources */,
@@ -233,6 +242,7 @@
 				D1F069731B29B723004A2B44 /* DCItemStore.m in Sources */,
 				D1F069701B29B67B004A2B44 /* BNRItem.m in Sources */,
 				D1F0694E1B29AFDD004A2B44 /* AppDelegate.m in Sources */,
+				A20C01AB1B2AB5EB0019A462 /* DCDetailViewController.m in Sources */,
 				D1F0694B1B29AFDD004A2B44 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

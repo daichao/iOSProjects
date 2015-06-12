@@ -19,7 +19,10 @@
     // Override point for customization after application launch.
     _window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor=[UIColor whiteColor];
-    DCItemViewController *main=[[DCItemViewController alloc]init];
+    
+    DCItemViewController *dcitem=[[DCItemViewController alloc]init];
+    UINavigationController *main=[[UINavigationController alloc]initWithRootViewController:dcitem];
+//   [ main addChildViewController:dcitem];
     _window.rootViewController=main;
     [_window makeKeyAndVisible];
     return YES;

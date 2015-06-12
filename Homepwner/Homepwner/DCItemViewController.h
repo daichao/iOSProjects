@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DCDetailViewController.h"
 @interface DCItemViewController : UITableViewController
 
 

@@ -10,7 +10,7 @@
 #import "BNRItem.h"
 #import "DCItemStore.h"
 
-@interface DCItemViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface DCItemViewController ()<UITableViewDataSource>
 @property(nonatomic,strong)IBOutlet UIView *headerView;//IBOutlet插座变量
 
 @end
@@ -31,10 +31,15 @@
     UIView *header=self.headerView;
     [self.tableView setTableHeaderView:header];
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+}
 -(instancetype)init{
     self=[super initWithStyle:UITableViewStylePlain];
     if (self) {
+        UINavigationItem *navItem=self.navigationItem;
+        navItem.title=@"Homepwner";
 //        for(int i=0;i<5;i++){
 //            [[DCItemStore sharedStore]createItem];
 //        }
@@ -98,6 +103,15 @@
 #pragma mark 移动表格行
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
     [[DCItemStore sharedStore]moveItemAtIndex:sourceIndexPath.row toIndex:destinationIndexPath.row];
+}
+//点击选择了某一行
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    DCDetailViewController *detailView=[[DCDetailViewController alloc]init];
+    NSArray *items=[[DCItemStore sharedStore]allItems];
+    BNRItem *selectedItem=items[indexPath.row];
+    detailView.item=selectedItem;
+    [self.navigationController pushViewController:detailView animated:YES];
+    
 }
 
 @end
