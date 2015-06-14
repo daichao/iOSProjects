@@ -17,19 +17,19 @@
 
 @implementation DCItemViewController
 
--(UIView*)headerView{
-    if(!_headerView){
-        [[NSBundle mainBundle]loadNibNamed:@"HeaderView" owner:self options:nil];
-    }
-    return _headerView;
-}
+//-(UIView*)headerView{
+//    if(!_headerView){
+//        [[NSBundle mainBundle]loadNibNamed:@"HeaderView" owner:self options:nil];
+//    }
+//    return _headerView;
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
-    UIView *header=self.headerView;
-    [self.tableView setTableHeaderView:header];
+//    UIView *header=self.headerView;
+//    [self.tableView setTableHeaderView:header];
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -40,12 +40,15 @@
     if (self) {
         UINavigationItem *navItem=self.navigationItem;
         navItem.title=@"Homepwner";
-//        for(int i=0;i<5;i++){
-//            [[DCItemStore sharedStore]createItem];
-//        }
+        
+        UIBarButtonItem *bbi=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:
+                              UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
+        navItem.rightBarButtonItem=bbi;
+        navItem.leftBarButtonItem=self.editButtonItem;
     }
     return self;
 }
+#pragma mark 默认指定初始化
 -(instancetype)initWithStyle:(UITableViewStyle)style{
    return  [self init];
 }
@@ -78,16 +81,17 @@
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
     
 }
+#pragma mark 编辑按钮事件
+//-(IBAction)toggleEditingMode:(id)sender{
+//    if (self.isEditing) {
+//        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+//        [self setEditing:NO animated:YES];
+//    }else{
+//        [sender setTitle:@"Done" forState:UIControlStateNormal];
+//        [self setEditing:YES animated:YES];
+//    }
+//}
 
--(IBAction)toggleEditingMode:(id)sender{
-    if (self.isEditing) {
-        [sender setTitle:@"Edit" forState:UIControlStateNormal];
-        [self setEditing:NO animated:YES];
-    }else{
-        [sender setTitle:@"Done" forState:UIControlStateNormal];
-        [self setEditing:YES animated:YES];
-    }
-}
 #pragma mark 删除表格行
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (editingStyle==UITableViewCellEditingStyleDelete) {
