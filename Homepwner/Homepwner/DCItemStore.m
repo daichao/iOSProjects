@@ -8,6 +8,7 @@
 
 #import "DCItemStore.h"
 #import "BNRItem.h"
+#import "DCImageStore.h"
 /*
  在类扩展中声明属性或方法，则只有这个类才能访问这个属性和方法，别的类无法访问
  */
@@ -46,6 +47,8 @@
     return item;
 }
 -(void)removeItem:(BNRItem *)item{
+    NSString *key=item.itemKey;
+    [[DCImageStore sharedStore]deleteImageForKey:key];
     [self.privateItems removeObjectIdenticalTo:item];//该方法只会移除数组所保存的那些和传入对象指针完全相同的指针。
 }
 -(void)moveItemAtIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex{
