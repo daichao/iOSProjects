@@ -101,16 +101,16 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
-    NSURL *mediaURL=info[UIImagePickerControllerMediaURL];
-    if(mediaURL){
-        //确认设备是否支持视频
-        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum([mediaURL path])) {
-            //将视频存入相册
-            UISaveVideoAtPathToSavedPhotosAlbum([mediaURL path], nil, nil, nil);
-            //删除临时目录下的视频
-            [[NSFileManager defaultManager]removeItemAtPath:[mediaURL path] error:nil];
-        }
-        else{
+//    NSURL *mediaURL=info[UIImagePickerControllerMediaURL];
+//    if(mediaURL){
+//        //确认设备是否支持视频
+//        if (UIVideoAtPathIsCompatibleWithSavedPhotosAlbum([mediaURL path])) {
+//            //将视频存入相册
+//            UISaveVideoAtPathToSavedPhotosAlbum([mediaURL path], nil, nil, nil);
+//            //删除临时目录下的视频
+//            [[NSFileManager defaultManager]removeItemAtPath:[mediaURL path] error:nil];
+//        }
+//        else{
             //通过info字典获取选择的照片
             UIImage *image=info[UIImagePickerControllerOriginalImage];
             //以itemkey为键，将照片存入DCImageStore对象
@@ -118,8 +118,8 @@
             self.imageView.image=image;
             //关闭uiimagepickercontroller对象
             [self dismissViewControllerAnimated:YES completion:nil];
-        }
-    }
+//        }
+//    }
     
     
     
