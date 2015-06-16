@@ -33,11 +33,17 @@
     for(DCLine *line in self.finishedLines){
         [self strokeLine:line];
     }
-    if(self.currentLine){
-        //同红色绘制正在画的线条
-        [[UIColor redColor]set];
-        [self strokeLine:self.currentLine];
+    [[UIColor redColor]set];
+    for(NSValue *key in self.linesInProgress){
+        [self strokeLine:self.linesInProgress[key]];
+        
     }
+    
+//    if(self.currentLine){
+//        //同红色绘制正在画的线条
+//        [[UIColor redColor]set];
+//        [self strokeLine:self.currentLine];
+//    }
 }
 
 
@@ -53,6 +59,7 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
     for(UITouch *t in touches){
         CGPoint location=[t locationInView:self];
         DCLine *line=[[DCLine alloc]init];
@@ -75,6 +82,7 @@
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
     for (UITouch *t in touches) {
         NSValue *key=[NSValue valueWithNonretainedObject:t];
         DCLine *line=self.linesInProgress[key];
@@ -87,12 +95,27 @@
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
     for(UITouch *t in touches){
+        NSValue *key=[NSValue valueWithNonretainedObject:t];
+        DCLine *line=self.linesInProgress[key];
+        [self.finishedLines addObject:line];
+        [self.linesInProgress removeObjectForKey:key];
         
     }
 //    [self.finishedLines addObject:self.currentLine];
 //    self.currentLine=nil;
     [self setNeedsDisplay];
     
+}
+
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event{
+    NSLog(@"%@",NSStringFromSelector(_cmd));
+    for(UITouch *t in touches){
+        NSValue *key=[NSValue valueWithNonretainedObject:t];
+        [self.linesInProgress removeObjectForKey:key];
+    }
+    
+    [self setNeedsDisplay];
 }
 @end
