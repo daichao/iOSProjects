@@ -8,8 +8,9 @@
 
 #import "DCDrawView.h"
 #import "DCLine.h"
-@interface DCDrawView()
+@interface DCDrawView()<UIGestureRecognizerDelegate>
 //@property (nonatomic,strong)DCLine *currentLine;
+@property(nonatomic,strong)UIPanGestureRecognizer *moveRecognizer;
 @property(nonatomic,strong)NSMutableDictionary *linesInProgress;
 @property(nonatomic,strong)NSMutableArray *finishedLines;
 @property(nonatomic,weak)DCLine *selectedLine;
@@ -59,7 +60,7 @@
     [self.finishedLines removeAllObjects];
     [self setNeedsDisplay];
 }
-
+#pragma mark 删除线条
 -(void)deleteLine:(id)sender{
     [self.finishedLines removeObject:self.selectedLine];
     //重置整个视图
@@ -72,20 +73,24 @@
     CGPoint point=[gr locationInView:self];
     self.selectedLine=[self lineAtPoint:point];
     if (self.selectedLine) {
+        //使视图成为UIMenuItem动作消息的目标
         [self becomeFirstResponder];
+        //获取UIMenuController对象
         UIMenuController *menu=[UIMenuController sharedMenuController];
-        
+        //创建一个新的标题为“Delete”的UIMenuIetm对象
         UIMenuItem *deleteItem=[[UIMenuItem alloc]initWithTitle:@"Delete" action:@selector(deleteLine:)];
         menu.menuItems=@[deleteItem];
-        
+        //先为UIMenuController对象设置显示区域，然后将其设置为可见
         [menu setTargetRect:CGRectMake(point.x, point.y, 2, 2) inView:self];
         [menu setMenuVisible:YES animated:YES];
     }
     else{
+        //如果没有选中的线条，就隐藏UIMenuController对象
         [[UIMenuController sharedMenuController]setMenuVisible:NO animated:YES];
     }
     [self setNeedsDisplay];
 }
+
 //如果要将某个自定义的UIView子类对象设置为第一响应对象，就必须覆盖该对象的canBecomeFirstResponder
 -(BOOL)canBecomeFirstResponder{
     return YES;
@@ -111,6 +116,57 @@
     return nil;
     
 }
+#pragma mark 长按实现
+-(void)longPress:(UIGestureRecognizer*)gr{
+    if(gr.state==UIGestureRecognizerStateBegan){
+        CGPoint point=[gr locationInView:self];
+        self.selectedLine =[self lineAtPoint:point];
+        
+        if(self.selectedLine){
+            [self.linesInProgress removeAllObjects];
+        }
+    }else if(gr.state==UIGestureRecognizerStateEnded){
+        self.selectedLine=nil;
+        
+    }
+    [self setNeedsDisplay];
+    
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    if(gestureRecognizer==self.moveRecognizer){
+        return YES;
+    }
+    return NO;
+}
+
+
+#pragma mark 移动
+-(void)moveLine:(UIPanGestureRecognizer*)gr{
+    if(!self.selectedLine){
+        return;
+    }
+    if(gr.state==UIGestureRecognizerStateChanged){
+        //获取手指的拖移距离
+        CGPoint translation=[gr translationInView:self];
+        
+        //将拖移距离加至选中的线条的起点和终点
+        CGPoint begin=self.selectedLine.begin;
+        CGPoint end=self.selectedLine.end;
+        begin.x+=translation.x;
+        begin.y+=translation.y;
+        end.x+=translation.x;
+        end.y+=translation.y;
+        //为选中的线条设置新的起点和终点
+        self.selectedLine.begin=begin;
+        self.selectedLine.end=end;
+        
+        [self setNeedsDisplay];
+        //将手指的当前位置设置为拖移手势的起始位置
+        [gr setTranslation:CGPointZero inView:self];
+    }
+}
+
 #pragma mark 初始化界面
 -(instancetype)initWithFrame:(CGRect)frame{
     self=[super initWithFrame:frame];
@@ -119,15 +175,26 @@
         self.finishedLines=[[NSMutableArray alloc]init];
         self.backgroundColor=[UIColor grayColor];
         self.multipleTouchEnabled=YES;
+        //双击
         UITapGestureRecognizer *doubleTapRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(doubleTap:)];
         doubleTapRecognizer.numberOfTapsRequired=2;
         doubleTapRecognizer.delaysTouchesBegan=YES;
         [self addGestureRecognizer:doubleTapRecognizer];
-        
+        //单击
         UITapGestureRecognizer *tapRecognizer=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tap:)];
         tapRecognizer.delaysTouchesBegan=YES;
+        //区分双击和单击
         [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
         [self addGestureRecognizer:tapRecognizer];
+        //长按
+        UILongPressGestureRecognizer *pressRecognizer=[[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(longPress:)];
+        [self addGestureRecognizer:pressRecognizer];
+        //拖移
+        self.moveRecognizer=[[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(moveLine:)];
+        self.moveRecognizer.delegate=self;
+        //当cancelsTouchesInView的值为NO时，意味着这个对象所依附的UIVIEW对象仍然会收到相应的UIResponder消息，从而有机会处理相关的UITouch对象。
+        self.moveRecognizer.cancelsTouchesInView=NO;
+        [self addGestureRecognizer:_moveRecognizer];
     }
     return self;
 }
