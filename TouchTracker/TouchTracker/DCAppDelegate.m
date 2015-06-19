@@ -23,6 +23,9 @@
     DCViewController *main=[[DCViewController alloc]init];
     _window.rootViewController=main;
     [_window makeKeyAndVisible];
+#ifdef VIEW_DEBUG
+    NSLog(@"%@",[self.window performSelector:@selector(recursiveDescription)]);
+#endif
     return YES;
 }
 

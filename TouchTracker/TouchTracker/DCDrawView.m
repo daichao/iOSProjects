@@ -28,7 +28,13 @@
     [bp addLineToPoint:line.end];
     [bp stroke];
 }
-
+//-(int)numberOfLines{
+//    int count=0;
+//    if(_finishedLines&&_linesInProgress){
+//        count=[_finishedLines count]+[_linesInProgress count];
+//    }
+//    return count;
+//}
 #pragma mark UIView方法，画图
 - (void)drawRect:(CGRect)rect {
     //用黑色绘制已经完成的线条
@@ -57,7 +63,8 @@
 -(void)doubleTap:(UIGestureRecognizer*)gr{
     NSLog(@"Recognized Double Tap");
     [self.linesInProgress removeAllObjects];
-    [self.finishedLines removeAllObjects];
+//    [self.finishedLines removeAllObjects];
+    self.finishedLines=[[NSMutableArray alloc]init];
     [self setNeedsDisplay];
 }
 #pragma mark 删除线条
@@ -243,7 +250,7 @@
         DCLine *line=self.linesInProgress[key];
         [self.finishedLines addObject:line];
         [self.linesInProgress removeObjectForKey:key];
-        
+        line.containingArray=self.finishedLines;
     }
 //    [self.finishedLines addObject:self.currentLine];
 //    self.currentLine=nil;

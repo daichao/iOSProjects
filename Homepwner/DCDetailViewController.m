@@ -21,6 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+#pragma mark检查是否存在有歧义布局的子视图
+-(void)viewDidLayoutSubviews{
+    for(UIView *subview in self.view.subviews){
+        if([subview hasAmbiguousLayout]){
+            NSLog(@"AMBIGUOUS:%@",subview);
+        }
+    }
+}
+
 //view将要出现时调用
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
@@ -125,14 +134,22 @@
     
     
 }
+#pragma mark 两种关闭键盘途径
 
-
+//按下换行键关闭键盘
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
 }
+//将detail视图转为UIControl然后为其创建一个action，点击视图空白部分关闭键盘
 - (IBAction)backgroundTapped:(id)sender {
     [self.view endEditing:YES];
+    //点击界面view用于检测视图缺少哪个约束
+    for (UIView *subview in self.view.subviews) {
+        if([subview hasAmbiguousLayout]){
+            [subview exerciseAmbiguityInLayout];
+        }
+    }
 }
 
 
