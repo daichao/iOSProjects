@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D1626F6D1B2333B600CD1DED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F6C1B2333B600CD1DED /* main.m */; };
+		D1626F701B2333B600CD1DED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F6F1B2333B600CD1DED /* AppDelegate.m */; };
+		D1626F761B2333B600CD1DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1626F741B2333B600CD1DED /* Main.storyboard */; };
+		D1626F781B2333B600CD1DED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1626F771B2333B600CD1DED /* Images.xcassets */; };
+		D1626F7B1B2333B600CD1DED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1626F791B2333B600CD1DED /* LaunchScreen.xib */; };
+		D1626F871B2333B600CD1DED /* DCTabBarViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F861B2333B600CD1DED /* DCTabBarViewControllerTests.m */; };
+		D1626F921B23344000CD1DED /* DCTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F911B23344000CD1DED /* DCTabBarViewController.m */; };
+		D1626F951B23531100CD1DED /* DCWebChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F941B23531100CD1DED /* DCWebChatViewController.m */; };
+		D1626F981B23532900CD1DED /* DCContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D1626F971B23532900CD1DED /* DCContactViewController.m */; };
+		D1626FA31B235F4800CD1DED /* bottleTipButtonNormal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F991B235F4800CD1DED /* bottleTipButtonNormal@2x.png */; };
+		D1626FA41B235F4800CD1DED /* ff_IconAdd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9A1B235F4800CD1DED /* ff_IconAdd@2x.png */; };
+		D1626FA51B235F4800CD1DED /* tabbar_contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9B1B235F4800CD1DED /* tabbar_contacts@2x.png */; };
+		D1626FA61B235F4800CD1DED /* tabbar_contactsHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9C1B235F4800CD1DED /* tabbar_contactsHL@2x.png */; };
+		D1626FA71B235F4800CD1DED /* tabbar_discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9D1B235F4800CD1DED /* tabbar_discover@2x.png */; };
+		D1626FA81B235F4800CD1DED /* tabbar_discoverHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9E1B235F4800CD1DED /* tabbar_discoverHL@2x.png */; };
+		D1626FA91B235F4800CD1DED /* tabbar_mainframe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626F9F1B235F4800CD1DED /* tabbar_mainframe@2x.png */; };
+		D1626FAA1B235F4800CD1DED /* tabbar_mainframeHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626FA01B235F4800CD1DED /* tabbar_mainframeHL@2x.png */; };
+		D1626FAB1B235F4800CD1DED /* tabbar_me@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626FA11B235F4800CD1DED /* tabbar_me@2x.png */; };
+		D1626FAC1B235F4800CD1DED /* tabbar_meHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D1626FA21B235F4800CD1DED /* tabbar_meHL@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D1626F811B2333B600CD1DED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D1626F5F1B2333B600CD1DED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D1626F661B2333B600CD1DED;
+			remoteInfo = DCTabBarViewController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D1626F671B2333B600CD1DED /* DCTabBarViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCTabBarViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1626F6B1B2333B600CD1DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1626F6C1B2333B600CD1DED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D1626F6E1B2333B600CD1DED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D1626F6F1B2333B600CD1DED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D1626F751B2333B600CD1DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D1626F771B2333B600CD1DED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D1626F7A1B2333B600CD1DED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		D1626F801B2333B600CD1DED /* DCTabBarViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DCTabBarViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1626F851B2333B600CD1DED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1626F861B2333B600CD1DED /* DCTabBarViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCTabBarViewControllerTests.m; sourceTree = "<group>"; };
+		D1626F901B23344000CD1DED /* DCTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCTabBarViewController.h; sourceTree = "<group>"; };
+		D1626F911B23344000CD1DED /* DCTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCTabBarViewController.m; sourceTree = "<group>"; };
+		D1626F931B23531100CD1DED /* DCWebChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCWebChatViewController.h; sourceTree = "<group>"; };
+		D1626F941B23531100CD1DED /* DCWebChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCWebChatViewController.m; sourceTree = "<group>"; };
+		D1626F961B23532900CD1DED /* DCContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCContactViewController.h; sourceTree = "<group>"; };
+		D1626F971B23532900CD1DED /* DCContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCContactViewController.m; sourceTree = "<group>"; };
+		D1626F991B235F4800CD1DED /* bottleTipButtonNormal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottleTipButtonNormal@2x.png"; sourceTree = "<group>"; };
+		D1626F9A1B235F4800CD1DED /* ff_IconAdd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ff_IconAdd@2x.png"; sourceTree = "<group>"; };
+		D1626F9B1B235F4800CD1DED /* tabbar_contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contacts@2x.png"; sourceTree = "<group>"; };
+		D1626F9C1B235F4800CD1DED /* tabbar_contactsHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contactsHL@2x.png"; sourceTree = "<group>"; };
+		D1626F9D1B235F4800CD1DED /* tabbar_discover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discover@2x.png"; sourceTree = "<group>"; };
+		D1626F9E1B235F4800CD1DED /* tabbar_discoverHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_discoverHL@2x.png"; sourceTree = "<group>"; };
+		D1626F9F1B235F4800CD1DED /* tabbar_mainframe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_mainframe@2x.png"; sourceTree = "<group>"; };
+		D1626FA01B235F4800CD1DED /* tabbar_mainframeHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_mainframeHL@2x.png"; sourceTree = "<group>"; };
+		D1626FA11B235F4800CD1DED /* tabbar_me@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_me@2x.png"; sourceTree = "<group>"; };
+		D1626FA21B235F4800CD1DED /* tabbar_meHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_meHL@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D1626F641B2333B600CD1DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1626F7D1B2333B600CD1DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D1626F5E1B2333B600CD1DED = {
+			isa = PBXGroup;
+			children = (
+				D1626F691B2333B600CD1DED /* DCTabBarViewController */,
+				D1626F831B2333B600CD1DED /* DCTabBarViewControllerTests */,
+				D1626F681B2333B600CD1DED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D1626F681B2333B600CD1DED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1626F671B2333B600CD1DED /* DCTabBarViewController.app */,
+				D1626F801B2333B600CD1DED /* DCTabBarViewControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D1626F691B2333B600CD1DED /* DCTabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D1D5569A1B247D28006E83B4 /* NavigationController */,
+				D1D556991B247C65006E83B4 /* TabBarController */,
+				D1626F991B235F4800CD1DED /* bottleTipButtonNormal@2x.png */,
+				D1626F9A1B235F4800CD1DED /* ff_IconAdd@2x.png */,
+				D1626F9B1B235F4800CD1DED /* tabbar_contacts@2x.png */,
+				D1626F9C1B235F4800CD1DED /* tabbar_contactsHL@2x.png */,
+				D1626F9D1B235F4800CD1DED /* tabbar_discover@2x.png */,
+				D1626F9E1B235F4800CD1DED /* tabbar_discoverHL@2x.png */,
+				D1626F9F1B235F4800CD1DED /* tabbar_mainframe@2x.png */,
+				D1626FA01B235F4800CD1DED /* tabbar_mainframeHL@2x.png */,
+				D1626FA11B235F4800CD1DED /* tabbar_me@2x.png */,
+				D1626FA21B235F4800CD1DED /* tabbar_meHL@2x.png */,
+				D1626F6E1B2333B600CD1DED /* AppDelegate.h */,
+				D1626F6F1B2333B600CD1DED /* AppDelegate.m */,
+				D1626F741B2333B600CD1DED /* Main.storyboard */,
+				D1626F771B2333B600CD1DED /* Images.xcassets */,
+				D1626F791B2333B600CD1DED /* LaunchScreen.xib */,
+				D1626F6A1B2333B600CD1DED /* Supporting Files */,
+			);
+			path = DCTabBarViewController;
+			sourceTree = "<group>";
+		};
+		D1626F6A1B2333B600CD1DED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1626F6B1B2333B600CD1DED /* Info.plist */,
+				D1626F6C1B2333B600CD1DED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1626F831B2333B600CD1DED /* DCTabBarViewControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D1626F861B2333B600CD1DED /* DCTabBarViewControllerTests.m */,
+				D1626F841B2333B600CD1DED /* Supporting Files */,
+			);
+			path = DCTabBarViewControllerTests;
+			sourceTree = "<group>";
+		};
+		D1626F841B2333B600CD1DED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D1626F851B2333B600CD1DED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D1D556991B247C65006E83B4 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				D1626F901B23344000CD1DED /* DCTabBarViewController.h */,
+				D1626F911B23344000CD1DED /* DCTabBarViewController.m */,
+				D1626F931B23531100CD1DED /* DCWebChatViewController.h */,
+				D1626F941B23531100CD1DED /* DCWebChatViewController.m */,
+				D1626F961B23532900CD1DED /* DCContactViewController.h */,
+				D1626F971B23532900CD1DED /* DCContactViewController.m */,
+			);
+			name = TabBarController;
+			sourceTree = "<group>";
+		};
+		D1D5569A1B247D28006E83B4 /* NavigationController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NavigationController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D1626F661B2333B600CD1DED /* DCTabBarViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1626F8A1B2333B600CD1DED /* Build configuration list for PBXNativeTarget "DCTabBarViewController" */;
+			buildPhases = (
+				D1626F631B2333B600CD1DED /* Sources */,
+				D1626F641B2333B600CD1DED /* Frameworks */,
+				D1626F651B2333B600CD1DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DCTabBarViewController;
+			productName = DCTabBarViewController;
+			productReference = D1626F671B2333B600CD1DED /* DCTabBarViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D1626F7F1B2333B600CD1DED /* DCTabBarViewControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1626F8D1B2333B600CD1DED /* Build configuration list for PBXNativeTarget "DCTabBarViewControllerTests" */;
+			buildPhases = (
+				D1626F7C1B2333B600CD1DED /* Sources */,
+				D1626F7D1B2333B600CD1DED /* Frameworks */,
+				D1626F7E1B2333B600CD1DED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D1626F821B2333B600CD1DED /* PBXTargetDependency */,
+			);
+			name = DCTabBarViewControllerTests;
+			productName = DCTabBarViewControllerTests;
+			productReference = D1626F801B2333B600CD1DED /* DCTabBarViewControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D1626F5F1B2333B600CD1DED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = daichao;
+				TargetAttributes = {
+					D1626F661B2333B600CD1DED = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					D1626F7F1B2333B600CD1DED = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = D1626F661B2333B600CD1DED;
+					};
+				};
+			};
+			buildConfigurationList = D1626F621B2333B600CD1DED /* Build configuration list for PBXProject "DCTabBarViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D1626F5E1B2333B600CD1DED;
+			productRefGroup = D1626F681B2333B600CD1DED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1626F661B2333B600CD1DED /* DCTabBarViewController */,
+				D1626F7F1B2333B600CD1DED /* DCTabBarViewControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D1626F651B2333B600CD1DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1626F761B2333B600CD1DED /* Main.storyboard in Resources */,
+				D1626FA91B235F4800CD1DED /* tabbar_mainframe@2x.png in Resources */,
+				D1626FAC1B235F4800CD1DED /* tabbar_meHL@2x.png in Resources */,
+				D1626FAB1B235F4800CD1DED /* tabbar_me@2x.png in Resources */,
+				D1626FA31B235F4800CD1DED /* bottleTipButtonNormal@2x.png in Resources */,
+				D1626FAA1B235F4800CD1DED /* tabbar_mainframeHL@2x.png in Resources */,
+				D1626F7B1B2333B600CD1DED /* LaunchScreen.xib in Resources */,
+				D1626F781B2333B600CD1DED /* Images.xcassets in Resources */,
+				D1626FA61B235F4800CD1DED /* tabbar_contactsHL@2x.png in Resources */,
+				D1626FA81B235F4800CD1DED /* tabbar_discoverHL@2x.png in Resources */,
+				D1626FA71B235F4800CD1DED /* tabbar_discover@2x.png in Resources */,
+				D1626FA41B235F4800CD1DED /* ff_IconAdd@2x.png in Resources */,
+				D1626FA51B235F4800CD1DED /* tabbar_contacts@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1626F7E1B2333B600CD1DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D1626F631B2333B600CD1DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1626F951B23531100CD1DED /* DCWebChatViewController.m in Sources */,
+				D1626F921B23344000CD1DED /* DCTabBarViewController.m in Sources */,
+				D1626F981B23532900CD1DED /* DCContactViewController.m in Sources */,
+				D1626F701B2333B600CD1DED /* AppDelegate.m in Sources */,
+				D1626F6D1B2333B600CD1DED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1626F7C1B2333B600CD1DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1626F871B2333B600CD1DED /* DCTabBarViewControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D1626F821B2333B600CD1DED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D1626F661B2333B600CD1DED /* DCTabBarViewController */;
+			targetProxy = D1626F811B2333B600CD1DED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D1626F741B2333B600CD1DED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1626F751B2333B600CD1DED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D1626F791B2333B600CD1DED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D1626F7A1B2333B600CD1DED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D1626F881B2333B600CD1DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D1626F891B2333B600CD1DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D1626F8B1B2333B600CD1DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCTabBarViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D1626F8C1B2333B600CD1DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DCTabBarViewController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D1626F8E1B2333B600CD1DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCTabBarViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCTabBarViewController.app/DCTabBarViewController";
+			};
+			name = Debug;
+		};
+		D1626F8F1B2333B600CD1DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DCTabBarViewControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DCTabBarViewController.app/DCTabBarViewController";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D1626F621B2333B600CD1DED /* Build configuration list for PBXProject "DCTabBarViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1626F881B2333B600CD1DED /* Debug */,
+				D1626F891B2333B600CD1DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1626F8A1B2333B600CD1DED /* Build configuration list for PBXNativeTarget "DCTabBarViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1626F8B1B2333B600CD1DED /* Debug */,
+				D1626F8C1B2333B600CD1DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1626F8D1B2333B600CD1DED /* Build configuration list for PBXNativeTarget "DCTabBarViewControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1626F8E1B2333B600CD1DED /* Debug */,
+				D1626F8F1B2333B600CD1DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D1626F5F1B2333B600CD1DED /* Project object */;
+}
