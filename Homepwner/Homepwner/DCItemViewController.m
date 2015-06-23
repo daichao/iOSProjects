@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // 注册一个标示符
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 //    UIView *header=self.headerView;
 //    [self.tableView setTableHeaderView:header];
@@ -73,12 +73,16 @@
 -(IBAction)addNewItem :(id)sender{
 //    NSInteger lastRow=[self.tableView numberOfRowsInSection:0];
     BNRItem *newItem=[[DCItemStore sharedStore]createItem];
-    //获取新创建的对象在allItems数组中的索引
-    NSInteger lastRow=[[[DCItemStore sharedStore]allItems]indexOfObject:newItem];
-    //在第一个表格段（section：0）插入与allItems数组中对象相对应的索引
-    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:lastRow inSection:0];
-    //将新行插入UITableView对象
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    DCDetailViewController *detailViewController=[[DCDetailViewController alloc]initForNewItem:YES];
+    detailViewController.item=newItem;
+    UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:detailViewController];
+    [self presentViewController:navController animated:YES completion:nil];
+//    //获取新创建的对象在allItems数组中的索引
+//    NSInteger lastRow=[[[DCItemStore sharedStore]allItems]indexOfObject:newItem];
+//    //在第一个表格段（section：0）插入与allItems数组中对象相对应的索引
+//    NSIndexPath *indexPath=[NSIndexPath indexPathForRow:lastRow inSection:0];
+//    //将新行插入UITableView对象
+//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationTop];
     
 }
 #pragma mark 编辑按钮事件
@@ -110,7 +114,8 @@
 }
 //点击选择了某一行
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    DCDetailViewController *detailView=[[DCDetailViewController alloc]init];
+//    DCDetailViewController *detailView=[[DCDetailViewController alloc]init];
+    DCDetailViewController *detailView=[[DCDetailViewController alloc]initForNewItem:NO];
     NSArray *items=[[DCItemStore sharedStore]allItems];
     BNRItem *selectedItem=items[indexPath.row];
     detailView.item=selectedItem;

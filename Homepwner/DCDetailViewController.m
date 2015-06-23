@@ -11,16 +11,91 @@
 #import  "DCImageStore.h"
 @import MobileCoreServices;
 
-@interface DCDetailViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate>
+@interface DCDetailViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate,UIPopoverControllerDelegate>
+
+@property(strong,nonatomic)UIPopoverController *imagePickerPopover;
+//因为nameField属性指向的不是xib文件中的顶层对象，所以将引用类型设置为weak
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
+@property (weak, nonatomic) IBOutlet UITextField *valueField;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 
 @end
 
 @implementation DCDetailViewController
 
+-(void)prepareViewsForOrientation:(UIInterfaceOrientation)orientation{
+    //如果是Pad则不执行任何操作
+    if([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad){
+        return;
+    }
+    //判断设备是否处于横排方向
+    if(UIInterfaceOrientationIsLandscape(orientation)){
+        self.imageView.hidden=YES;
+        self.cameraButton.enabled=NO;
+    }
+    else{
+        self.imageView.hidden=NO;
+        self.cameraButton.enabled=YES;
+    }
+    
+}
+#pragma mark 界面发生变化时，执行某些操作
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [self prepareViewsForOrientation:toInterfaceOrientation];
+}
+//指定初始化方法
+-(instancetype)initForNewItem:(BOOL)isNew{
+    self=[super initWithNibName:nil bundle:nil];
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
+            self.navigationItem.rightBarButtonItem=doneItem;
+            
+            UIBarButtonItem *cancelItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+            self.navigationItem.leftBarButtonItem=cancelItem;
+            
+        }
+    }
+    return self;
+}
+
+-(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
+    @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"Use initForNewItem" userInfo:nil];
+    return nil;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    UIImageView *iv=[[UIImageView alloc]initWithImage:nil];
+    //设置UIImageView对象的内容缩放模式
+    iv.contentMode=UIViewContentModeScaleAspectFit;
+    //告诉自动布局系统不要将自动缩放掩码转换为约束,避免自动布局系统生成与其他约束产生冲突的NSAutoresizingMaskLayoutConstraint对象
+    iv.translatesAutoresizingMaskIntoConstraints=NO;
+    [self.view addSubview:iv];
+    
+    self.imageView=iv;
+    NSDictionary *nameMap=@{@"imageView":self.imageView,
+                            @"dateLabel":self.dateLabel,
+                            @"toolbar":self.toolbar};
+    //imageView的左边和右边与父视图的距离都是0
+    NSArray *horizontalConstraints=[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imageView]-0-|" options:0 metrics:nil views:nameMap];
+    //imageView的顶边与datelabel的距离是8点，底边与toolbar的距离也是8点
+    NSArray *verticalConstraints=[NSLayoutConstraint constraintsWithVisualFormat:@"V:[dateLabel]-[imageView]-[toolbar]" options:0 metrics:nil views:nameMap];
+    
+    [self.view addConstraints:horizontalConstraints];
+    [self.view addConstraints:verticalConstraints];
+    //将imageView垂直方向的优先级设置为比其他视图低的数值，数值为1000，表示不允许自动布局系统基于固有内容大小放大视图尺寸、缩小尺寸，小于1000则允许。
+    [self.view setContentHuggingPriority:200 forAxis:UILayoutConstraintAxisVertical];
+    [self.view setContentCompressionResistancePriority:700 forAxis:UILayoutConstraintAxisVertical];
 }
+
+#pragma mark将约束添加到视图
+
 #pragma mark检查是否存在有歧义布局的子视图
 -(void)viewDidLayoutSubviews{
     for(UIView *subview in self.view.subviews){
@@ -33,6 +108,10 @@
 //view将要出现时调用
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    
+    UIInterfaceOrientation io=[[UIApplication sharedApplication]statusBarOrientation];
+    [self prepareViewsForOrientation:io];
+    
     BNRItem *item=self.item;
     self.nameField.text=item.itemName;
     self.serialNumberField.text=item.serialNumber;
@@ -88,6 +167,12 @@
 }
 */
 - (IBAction)takePicture:(id)sender {
+    if ([self.imagePickerPopover isPopoverVisible]) {
+        //如果imagePickerPopover指向的是有效的UIPopoverController对象，并且该对象的视图是可见的，就关闭这个对象，并将其设为nil
+        [_imagePickerPopover dismissPopoverAnimated:YES];
+        _imagePickerPopover=nil;
+        return;
+    }
     UIImagePickerController *imagePicker=[[UIImagePickerController alloc]init];
     NSArray *availableTypes=[UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];//返回一个数组，其中包含2个对象image和moive
     /*
@@ -106,7 +191,21 @@
     }
     imagePicker.delegate=self;
     //以模态的形式显示UIImagePickerController对象
-    [self presentViewController:imagePicker animated:YES completion:nil];
+//    [self presentViewController:imagePicker animated:YES completion:nil];
+    
+    //创建UIPopoverController对象前先检查当前设备是否是ipad
+    if ([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad) {
+        //创建UIPopverController对象，用于显示UIImagePickerController对象
+        self.imagePickerPopover=[[UIPopoverController alloc]initWithContentViewController:imagePicker];
+        self.imagePickerPopover.delegate=self;
+        
+        //显示UIPopoverController对象，sender指向的是代表相机按钮的UIBarButtonItem对象
+        [self.imagePickerPopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        
+    }
+    else{
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
@@ -126,7 +225,18 @@
             [[DCImageStore sharedStore]setImage:image forKey:self.item.itemKey];
             self.imageView.image=image;
             //关闭uiimagepickercontroller对象
-            [self dismissViewControllerAnimated:YES completion:nil];
+//            [self dismissViewControllerAnimated:YES completion:nil];
+    //判断UIPopoverController对象是否存在
+    if (self.imagePickerPopover) {
+        //关闭UIPopoverController对象
+        [self.imagePickerPopover dismissPopoverAnimated:YES];
+        self.imagePickerPopover=nil;
+        
+    }
+    else{
+        //关闭模态形式显示的UIImagePickerController对象
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 //        }
 //    }
     
@@ -150,6 +260,11 @@
             [subview exerciseAmbiguityInLayout];
         }
     }
+}
+//触摸屏幕其他区域可以关闭popover对象
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    NSLog(@"User dismissed popover");
+    self.imagePickerPopover=nil;
 }
 
 
