@@ -9,6 +9,8 @@
 #import "DCDetailViewController.h"
 #import "BNRItem.h"
 #import  "DCImageStore.h"
+#import "DCItemStore.h"
+
 @import MobileCoreServices;
 
 @interface DCDetailViewController ()<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UITextFieldDelegate,UIPopoverControllerDelegate>
@@ -64,6 +66,13 @@
     return self;
 }
 
+-(void)save:(id)sender{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+}
+-(void)cancel:(id)sender{
+    [[DCItemStore sharedStore]removeItem:self.item];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
+}
 -(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     @throw [NSException exceptionWithName:@"Wrong initializer" reason:@"Use initForNewItem" userInfo:nil];
     return nil;

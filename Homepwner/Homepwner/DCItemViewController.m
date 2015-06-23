@@ -75,8 +75,20 @@
     BNRItem *newItem=[[DCItemStore sharedStore]createItem];
     DCDetailViewController *detailViewController=[[DCDetailViewController alloc]initForNewItem:YES];
     detailViewController.item=newItem;
+    detailViewController.dismissBlock=^{
+        [self.tableView reloadData];
+    };
     UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:detailViewController];
+    navController.modalPresentationStyle=UIModalPresentationFormSheet;
+//    navController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;//从底部滑入
+//    navController.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;//淡入
+    navController.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;//3D效果翻转
+    
+    //模拟书页卷角,如果使用这个效果，则必须确保view全屏显示，与上面三个动画效果不同，使用书页卷角动画，必须将
+    // navController.modalPresentationStyle=UIModalPresentationFormSheet;注释掉
+//    navController.modalTransitionStyle=UIModalTransitionStylePartialCurl;
     [self presentViewController:navController animated:YES completion:nil];
+    
 //    //获取新创建的对象在allItems数组中的索引
 //    NSInteger lastRow=[[[DCItemStore sharedStore]allItems]indexOfObject:newItem];
 //    //在第一个表格段（section：0）插入与allItems数组中对象相对应的索引
