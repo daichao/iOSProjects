@@ -22,12 +22,20 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qzB-EU-O6G">
                     <rect key="frame" x="22" y="145" width="43" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="8ep-2b-qVb"/>
+                        <constraint firstAttribute="width" constant="43" id="yi2-qG-YRN"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-nS-B8i">
                     <rect key="frame" x="22" y="203" width="42" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="42" id="4O4-hf-waL"/>
+                        <constraint firstAttribute="height" constant="21" id="idq-0f-BPB"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>

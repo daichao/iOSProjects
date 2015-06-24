@@ -20,9 +20,12 @@
 
 +(instancetype)sharedStore{
     static DCItemStore *sharedStore=nil;
-    if(!sharedStore){
-        sharedStore=[[self alloc]initPrivate];
-    }
+//    if(!sharedStore){
+//        sharedStore=[[self alloc]initPrivate];
+//    }
+    //线程安全的单例
+    static dispatch_once_t once_token;
+    dispatch_once(&once_token,^{sharedStore=[[self alloc]initPrivate];});
     return sharedStore;
 }
 
@@ -33,7 +36,12 @@
 -(instancetype)initPrivate{
     self=[super init];
     if(self){
-        _privateItems=[[NSMutableArray alloc]init];
+//        _privateItems=[[NSMutableArray alloc]init];
+        NSString *path=[self itemArchivePath];
+        _privateItems=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        if(!_privateItems){
+            _privateItems=[[NSMutableArray alloc]init];
+        }
     }
     return self;
 }
@@ -42,7 +50,8 @@
     
 }
 -(BNRItem*)createItem{
-    BNRItem *item=[BNRItem randomItem];
+//    BNRItem *item=[BNRItem randomItem];
+    BNRItem *item=[[BNRItem alloc]init];
     [self.privateItems addObject:item];
     return item;
 }
@@ -58,5 +67,16 @@
     BNRItem *item=self.privateItems[fromIndex];
     [self.privateItems removeObjectAtIndex:fromIndex];
     [self.privateItems insertObject:item atIndex:toIndex];
+}
+
+-(NSString*)itemArchivePath{
+    NSArray *documentDirectories=NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory=[documentDirectories firstObject];
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+    
+}
+-(BOOL)saveChanges{
+    NSString *path=[self itemArchivePath];
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
 }
 @end

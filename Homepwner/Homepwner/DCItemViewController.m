@@ -79,7 +79,12 @@
         [self.tableView reloadData];
     };
     UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:detailViewController];
-    navController.modalPresentationStyle=UIModalPresentationFormSheet;
+    navController.modalPresentationStyle=UIModalPresentationFormSheet;//模态显示
+    /*
+     不可以这样写，否则detailview会覆盖itemview，但是navigationbar不会被覆盖，也就是说由父视图控制器显示子视图
+     */
+//    navController.modalPresentationStyle=UIModalPresentationCurrentContext;
+//    self.definesPresentationContext=YES;
 //    navController.modalTransitionStyle=UIModalTransitionStyleCoverVertical;//从底部滑入
 //    navController.modalTransitionStyle=UIModalTransitionStyleCrossDissolve;//淡入
     navController.modalTransitionStyle=UIModalTransitionStyleFlipHorizontal;//3D效果翻转
