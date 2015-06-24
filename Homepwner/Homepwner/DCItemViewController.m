@@ -9,6 +9,7 @@
 #import "DCItemViewController.h"
 #import "BNRItem.h"
 #import "DCItemStore.h"
+#import "DCItemCell.h"
 
 @interface DCItemViewController ()<UITableViewDataSource>
 @property(nonatomic,strong)IBOutlet UIView *headerView;//IBOutlet插座变量
@@ -27,7 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 注册一个标示符
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
+    //创建UINib对象，该对象代表包含了DCItemCell的NIB文件
+    UINib *nib=[UINib nibWithNibName:@"DCItemCell" bundle:nil];
+    //通过UINib对象注册相应的nib文件
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"DCItemCell"];
 //    UIView *header=self.headerView;
 //    [self.tableView setTableHeaderView:header];
 }
@@ -61,6 +66,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [[[DCItemStore sharedStore]allItems]count];
 }
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableCell"];
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
