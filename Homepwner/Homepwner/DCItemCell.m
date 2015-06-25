@@ -9,5 +9,10 @@
 #import "DCItemCell.h"
 
 @implementation DCItemCell
-
+-(IBAction)showImage:(id)sender{
+    //调用Block对象之前要检查Block对象是否存在
+    if(self.actionBlock){
+        self.actionBlock();
+    }
+}
 @end

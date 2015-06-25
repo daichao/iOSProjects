@@ -230,6 +230,7 @@
 //        else{
             //通过info字典获取选择的照片
             UIImage *image=info[UIImagePickerControllerOriginalImage];
+    [self.item setThumbnailFromImage:image];
             //以itemkey为键，将照片存入DCImageStore对象
             [[DCImageStore sharedStore]setImage:image forKey:self.item.itemKey];
             self.imageView.image=image;

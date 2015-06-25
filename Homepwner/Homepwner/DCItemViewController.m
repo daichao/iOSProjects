@@ -10,10 +10,13 @@
 #import "BNRItem.h"
 #import "DCItemStore.h"
 #import "DCItemCell.h"
+#import "DCImageStore.h"
+#import "DCImageViewController.h"
 
-@interface DCItemViewController ()<UITableViewDataSource>
+
+@interface DCItemViewController ()<UITableViewDataSource,UIPopoverControllerDelegate>
 @property(nonatomic,strong)IBOutlet UIView *headerView;//IBOutlet插座变量
-
+@property(nonatomic,strong)UIPopoverController *imagePopover;
 @end
 
 @implementation DCItemViewController
@@ -69,11 +72,44 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 //    UITableViewCell *cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"UITableCell"];
-    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+//    UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    //获取DCItemCell对象，返回的可能是现有的对象，也可能是新创建的对象
+    DCItemCell *cell=[tableView dequeueReusableCellWithIdentifier:@"DCItemCell" forIndexPath:indexPath];
     NSArray *items=[[DCItemStore sharedStore] allItems];
     BNRItem *item=[items objectAtIndex:indexPath.row];
-    cell.textLabel.text=[item debugDescription];
+//    cell.textLabel.text=[item debugDescription];
+    //根据DCItemCell对象设置DCItemCell对象
+    cell.nameLabel.text=item.itemName;
+    cell.serialNumberLabel.text=item.serialNumber;
+    cell.valueLabel.text=[NSString stringWithFormat:@"$%d",item.valueInDollars];
+    cell.thumbnailView.image=item.thumbnail;
+    __weak DCItemCell *weakCell =cell;
+    cell.actionBlock=^{
+        NSLog(@"Going to show image for %@",item);
+        DCItemCell *strongCell=weakCell;
+        if([UIDevice currentDevice].userInterfaceIdiom==UIUserInterfaceIdiomPad){
+            NSString *itemKey=item.itemKey;
+            UIImage *img=[[DCImageStore sharedStore]imageForKey:itemKey];
+            if(!img){
+                return;
+            }
+            //根据UITableView对象的坐标系获取UIImageView对象的位置和大小
+//            CGRect rect=[self.view convertRect:cell.thumbnailView.bounds fromView:cell.thumbnailView];
+            CGRect rect=[self.view convertRect:strongCell.thumbnailView.bounds fromView:strongCell.thumbnailView];
+            DCImageViewController *ivc=[[DCImageViewController alloc]init];
+            ivc.image=img;
+            
+            self.imagePopover=[[UIPopoverController alloc]initWithContentViewController:ivc];
+            self.imagePopover.delegate=self;
+            self.imagePopover.popoverContentSize=CGSizeMake(600, 600) ;
+            [self.imagePopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+        }
+    };
     return cell;
+}
+
+-(void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController{
+    self.imagePopover=nil;
 }
 
 -(IBAction)addNewItem :(id)sender{

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A20A0BA01B3BE9FB00FA9DEF /* DCImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20A0B9F1B3BE9FB00FA9DEF /* DCImageViewController.m */; };
 		A20C01A41B2A86DA0019A462 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20C01A31B2A86DA0019A462 /* HeaderView.xib */; };
 		A20C01AB1B2AB5EB0019A462 /* DCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */; };
 		A20C01AC1B2AB5EB0019A462 /* DCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A20A0B9E1B3BE9FB00FA9DEF /* DCImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCImageViewController.h; sourceTree = "<group>"; };
+		A20A0B9F1B3BE9FB00FA9DEF /* DCImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCImageViewController.m; sourceTree = "<group>"; };
 		A20C01A31B2A86DA0019A462 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		A20C01A81B2AB5EB0019A462 /* DCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DCDetailViewController.h; path = ../DCDetailViewController.h; sourceTree = "<group>"; };
 		A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DCDetailViewController.m; path = ../DCDetailViewController.m; sourceTree = "<group>"; };
@@ -102,6 +105,8 @@
 			children = (
 				A20C01A81B2AB5EB0019A462 /* DCDetailViewController.h */,
 				A20C01A91B2AB5EB0019A462 /* DCDetailViewController.m */,
+				A20A0B9E1B3BE9FB00FA9DEF /* DCImageViewController.h */,
+				A20A0B9F1B3BE9FB00FA9DEF /* DCImageViewController.m */,
 				A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */,
 				D1F0696E1B29B67B004A2B44 /* BNRItem.h */,
 				D1F0696F1B29B67B004A2B44 /* BNRItem.m */,
@@ -259,6 +264,7 @@
 				A2D944731B2EEECF00F4CE4C /* DCImageStore.m in Sources */,
 				A27614C91B3AACEA0006E953 /* DCItemCell.m in Sources */,
 				A20C01AB1B2AB5EB0019A462 /* DCDetailViewController.m in Sources */,
+				A20A0BA01B3BE9FB00FA9DEF /* DCImageViewController.m in Sources */,
 				D1F0694B1B29AFDD004A2B44 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

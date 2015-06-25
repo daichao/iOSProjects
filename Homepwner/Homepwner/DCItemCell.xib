@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -12,28 +13,64 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5jk-Iq-kkf" id="jBy-JU-5IB">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-H5-gZm">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zfw-H5-gZm">
                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="8g9-gX-RsV"/>
+                            <constraint firstAttribute="width" constant="60" id="Oau-0n-ppG"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO7-Wr-AEI">
-                        <rect key="frame" x="63" y="39" width="188" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jO7-Wr-AEI">
+                        <rect key="frame" x="63" y="39" width="176" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="gHO-KS-TTP"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lck-Cp-Vqg">
-                        <rect key="frame" x="270" y="19" width="42" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lck-Cp-Vqg">
+                        <rect key="frame" x="259" y="19" width="53" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-OV-bY4">
-                        <rect key="frame" x="63" y="0.0" width="188" height="31"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sIe-OV-bY4">
+                        <rect key="frame" x="63" y="8" width="176" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="MOR-wz-9e5"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PRY-fD-DEM">
+                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="showImage:" destination="5jk-Iq-kkf" eventType="touchUpInside" id="NYe-RO-rF7"/>
+                        </connections>
+                    </button>
                 </subviews>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="lck-Cp-Vqg" secondAttribute="centerY" id="14j-QO-FMm"/>
+                    <constraint firstItem="lck-Cp-Vqg" firstAttribute="leading" secondItem="sIe-OV-bY4" secondAttribute="trailing" constant="20" id="1xC-eI-1F9"/>
+                    <constraint firstItem="jO7-Wr-AEI" firstAttribute="leading" secondItem="zfw-H5-gZm" secondAttribute="trailing" constant="3" id="2EL-gu-1eN"/>
+                    <constraint firstItem="PRY-fD-DEM" firstAttribute="bottom" secondItem="zfw-H5-gZm" secondAttribute="bottom" id="5ai-j2-RGP"/>
+                    <constraint firstItem="zfw-H5-gZm" firstAttribute="leading" secondItem="jBy-JU-5IB" secondAttribute="leadingMargin" constant="-8" id="Qmk-9J-Itt"/>
+                    <constraint firstItem="sIe-OV-bY4" firstAttribute="top" secondItem="jBy-JU-5IB" secondAttribute="topMargin" id="SvM-pb-uyi"/>
+                    <constraint firstItem="PRY-fD-DEM" firstAttribute="top" secondItem="zfw-H5-gZm" secondAttribute="top" id="TEA-VK-pry"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="jO7-Wr-AEI" secondAttribute="bottom" constant="-8" id="Yts-33-Mtv"/>
+                    <constraint firstItem="lck-Cp-Vqg" firstAttribute="trailing" secondItem="jBy-JU-5IB" secondAttribute="trailingMargin" id="bkt-Jl-cOh"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jO7-Wr-AEI" secondAttribute="trailing" constant="73" id="cEl-ht-2OU"/>
+                    <constraint firstItem="sIe-OV-bY4" firstAttribute="leading" secondItem="zfw-H5-gZm" secondAttribute="trailing" constant="3" id="d1m-CQ-rUc"/>
+                    <constraint firstItem="PRY-fD-DEM" firstAttribute="trailing" secondItem="zfw-H5-gZm" secondAttribute="trailing" id="h8q-WC-Ebh"/>
+                    <constraint firstAttribute="centerY" secondItem="zfw-H5-gZm" secondAttribute="centerY" id="k2X-vk-VMq"/>
+                    <constraint firstItem="PRY-fD-DEM" firstAttribute="leading" secondItem="zfw-H5-gZm" secondAttribute="leading" id="vkV-BH-55k"/>
+                    <constraint firstItem="jO7-Wr-AEI" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sIe-OV-bY4" secondAttribute="bottom" id="vpn-tb-p32"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="nameLabel" destination="sIe-OV-bY4" id="gSb-8p-591"/>
