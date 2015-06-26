@@ -14,4 +14,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property(nonatomic,copy)void(^actionBlock)(void);
+@property(nonatomic,weak)IBOutlet NSLayoutConstraint *imageViewHeightConstraint;
+//@property(nonatomic,weak)IBOutlet NSLayoutConstraint *imageViewWidthConstraint;
+
 @end

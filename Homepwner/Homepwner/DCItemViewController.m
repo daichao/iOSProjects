@@ -41,8 +41,32 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [self.tableView reloadData];
+//    [self.tableView reloadData];
+    [self updateTableViewForDynamicTypeSize];
 }
+
+-(void)updateTableViewForDynamicTypeSize{
+    static NSDictionary *cellHeightDictionary;
+    if(!cellHeightDictionary){
+        cellHeightDictionary=@{
+                               UIContentSizeCategoryExtraExtraExtraLarge:@75,
+                               UIContentSizeCategoryExtraExtraLarge:@65,
+                               UIContentSizeCategoryExtraLarge:@55,
+                               UIContentSizeCategoryLarge:@44,
+                               UIContentSizeCategoryMedium:@44,
+                               UIContentSizeCategorySmall:@44,
+                               UIContentSizeCategoryExtraSmall:@44
+                               };
+    }
+    NSString *userSize=[[UIApplication sharedApplication]preferredContentSizeCategory];
+    
+    NSNumber *cellHeight=cellHeightDictionary[userSize];
+    [self.tableView setRowHeight:cellHeight.floatValue];
+    [self.tableView reloadData];
+    
+}
+
+
 -(instancetype)init{
     self=[super initWithStyle:UITableViewStylePlain];
     if (self) {
@@ -53,8 +77,17 @@
                               UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
         navItem.rightBarButtonItem=bbi;
         navItem.leftBarButtonItem=self.editButtonItem;
+        
+        
+        NSNotificationCenter *nc=[NSNotificationCenter defaultCenter];
+        [nc addObserver:self selector:@selector(updateTableViewForDynamicTypeSize) name:UIContentSizeCategoryDidChangeNotification object:nil];
     }
     return self;
+}
+
+-(void)dealloc{
+    NSNotificationCenter *NC=[NSNotificationCenter defaultCenter];
+    [NC removeObserver:self];
 }
 #pragma mark 默认指定初始化
 -(instancetype)initWithStyle:(UITableViewStyle)style{

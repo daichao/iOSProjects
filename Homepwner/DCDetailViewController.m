@@ -23,12 +23,31 @@
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
+
+@property(weak,nonatomic)IBOutlet UILabel *nameLabel;
+@property(weak,nonatomic)IBOutlet UILabel *serialNumberLabel;
+@property(weak,nonatomic)IBOutlet UILabel *valueLabel;
+
+
 
 @end
 
 @implementation DCDetailViewController
+
+-(void)updateFonts{
+    UIFont *font=[UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    self.nameLabel.font=font;
+    self.serialNumberLabel.font=font;
+    self.valueLabel.font=font;
+    self.dateLabel.font=font;
+    
+    self.nameField.font=font;
+    self.serialNumberField.font=font;
+    self.valueField.font=font;
+    
+}
+
 
 -(void)prepareViewsForOrientation:(UIInterfaceOrientation)orientation{
     //如果是Pad则不执行任何操作
@@ -50,6 +69,7 @@
 -(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
     [self prepareViewsForOrientation:toInterfaceOrientation];
 }
+
 //指定初始化方法
 -(instancetype)initForNewItem:(BOOL)isNew{
     self=[super initWithNibName:nil bundle:nil];
@@ -62,9 +82,19 @@
             self.navigationItem.leftBarButtonItem=cancelItem;
             
         }
+        NSNotificationCenter *defaultCenter=[NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self selector:@selector(updateFonts) name:UIContentSizeCategoryDidChangeNotification object:nil];
     }
     return self;
 }
+
+
+-(void)dealloc{
+    NSNotificationCenter *defaultCenter=[NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
+}
+
+
 
 -(void)save:(id)sender{
     [self.presentingViewController dismissViewControllerAnimated:YES completion:self.dismissBlock];
@@ -117,7 +147,7 @@
 //view将要出现时调用
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    
+    [self updateFonts];
     UIInterfaceOrientation io=[[UIApplication sharedApplication]statusBarOrientation];
     [self prepareViewsForOrientation:io];
     
