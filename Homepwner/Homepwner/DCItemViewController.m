@@ -73,6 +73,9 @@
         UINavigationItem *navItem=self.navigationItem;
         navItem.title=@"Homepwner";
         
+        self.restorationIdentifier=NSStringFromClass([self class]);
+        self.restorationClass=[self class];
+        
         UIBarButtonItem *bbi=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:
                               UIBarButtonSystemItemAdd target:self action:@selector(addNewItem:)];
         navItem.rightBarButtonItem=bbi;
@@ -154,6 +157,7 @@
         [self.tableView reloadData];
     };
     UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:detailViewController];
+    navController.restorationIdentifier=NSStringFromClass([navController class]);
     navController.modalPresentationStyle=UIModalPresentationFormSheet;//模态显示
     /*
      不可以这样写，否则detailview会覆盖itemview，但是navigationbar不会被覆盖，也就是说由父视图控制器显示子视图

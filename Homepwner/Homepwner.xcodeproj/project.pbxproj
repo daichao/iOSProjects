@@ -14,6 +14,7 @@
 		A21EDA4E1B423A1F00B3320A /* Homepwner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A21EDA4C1B423A1F00B3320A /* Homepwner.xcdatamodeld */; };
 		A21EDA511B423C9F00B3320A /* DCImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A21EDA501B423C9F00B3320A /* DCImageTransformer.m */; };
 		A22C86381B43CB23009ADBDC /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A22C86371B43CB23009ADBDC /* BNRItem.m */; };
+		A2640B3B1B44DC4100D31AF9 /* DCAssetTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2640B3A1B44DC4100D31AF9 /* DCAssetTypeViewController.m */; };
 		A27614C91B3AACEA0006E953 /* DCItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A27614C81B3AACEA0006E953 /* DCItemCell.m */; };
 		A27614CB1B3AAD620006E953 /* DCItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A27614CA1B3AAD620006E953 /* DCItemCell.xib */; };
 		A2D944731B2EEECF00F4CE4C /* DCImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = A2D944721B2EEECF00F4CE4C /* DCImageStore.m */; };
@@ -48,6 +49,8 @@
 		A21EDA501B423C9F00B3320A /* DCImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCImageTransformer.m; sourceTree = "<group>"; };
 		A22C86361B43CB23009ADBDC /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		A22C86371B43CB23009ADBDC /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		A2640B391B44DC4100D31AF9 /* DCAssetTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCAssetTypeViewController.h; sourceTree = "<group>"; };
+		A2640B3A1B44DC4100D31AF9 /* DCAssetTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCAssetTypeViewController.m; sourceTree = "<group>"; };
 		A27614C71B3AACEA0006E953 /* DCItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCItemCell.h; sourceTree = "<group>"; };
 		A27614C81B3AACEA0006E953 /* DCItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCItemCell.m; sourceTree = "<group>"; };
 		A27614CA1B3AAD620006E953 /* DCItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DCItemCell.xib; sourceTree = "<group>"; };
@@ -115,6 +118,8 @@
 				A20C01AA1B2AB5EB0019A462 /* DCDetailViewController.xib */,
 				D1F069711B29B723004A2B44 /* DCItemStore.h */,
 				D1F069721B29B723004A2B44 /* DCItemStore.m */,
+				A2640B391B44DC4100D31AF9 /* DCAssetTypeViewController.h */,
+				A2640B3A1B44DC4100D31AF9 /* DCAssetTypeViewController.m */,
 				D1F0694C1B29AFDD004A2B44 /* AppDelegate.h */,
 				D1F0694D1B29AFDD004A2B44 /* AppDelegate.m */,
 				D1F0694F1B29AFDD004A2B44 /* DCItemViewController.h */,
@@ -271,6 +276,7 @@
 				D1F0694E1B29AFDD004A2B44 /* AppDelegate.m in Sources */,
 				A2D944731B2EEECF00F4CE4C /* DCImageStore.m in Sources */,
 				A27614C91B3AACEA0006E953 /* DCItemCell.m in Sources */,
+				A2640B3B1B44DC4100D31AF9 /* DCAssetTypeViewController.m in Sources */,
 				A20C01AB1B2AB5EB0019A462 /* DCDetailViewController.m in Sources */,
 				A22C86381B43CB23009ADBDC /* BNRItem.m in Sources */,
 				A20A0BA01B3BE9FB00FA9DEF /* DCImageViewController.m in Sources */,

@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import  "DCImageStore.h"
 #import "DCItemStore.h"
+#import "DCAssetTypeViewController.h"
 
 @import MobileCoreServices;
 
@@ -29,6 +30,7 @@
 @property(weak,nonatomic)IBOutlet UILabel *serialNumberLabel;
 @property(weak,nonatomic)IBOutlet UILabel *valueLabel;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *assetTypeButton;
 
 
 @end
@@ -74,6 +76,8 @@
 -(instancetype)initForNewItem:(BOOL)isNew{
     self=[super initWithNibName:nil bundle:nil];
     if (self) {
+        self.restorationIdentifier=NSStringFromClass([self class]);
+        self.restorationClass=[self class];
         if (isNew) {
             UIBarButtonItem *doneItem=[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(save:)];
             self.navigationItem.rightBarButtonItem=doneItem;
@@ -169,10 +173,23 @@
     
     
     NSString *itemKey=self.item.itemKey;
+    
     UIImage *imageToDisplay=[[DCImageStore sharedStore]imageForKey:itemKey];
     //将得到的照片赋给UIImageView对象
     self.imageView.image=imageToDisplay;
+    
+    NSString *typeLabel=[self.item.assetType valueForKey:@"label"];
+    if(!typeLabel){
+        typeLabel=@"None";
+    }
+    self.assetTypeButton.title=[NSString stringWithFormat:@"Type:%@",typeLabel];
+    [self updateFonts];
+    
 }
+
+
+
+
 //view将要消失时调用
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
@@ -247,6 +264,15 @@
     }
 }
 
+-(IBAction)showAssetTypePicker:(id)sender{
+    [self.view endEditing:YES];
+    DCAssetTypeViewController *avc=[[DCAssetTypeViewController alloc]init];
+    avc.item=self.item;
+    [self.navigationController pushViewController:avc animated:YES];
+}
+
+
+
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
 //    NSURL *mediaURL=info[UIImagePickerControllerMediaURL];
 //    if(mediaURL){
@@ -306,6 +332,9 @@
     NSLog(@"User dismissed popover");
     self.imagePickerPopover=nil;
 }
+
+
+
 
 
 @end

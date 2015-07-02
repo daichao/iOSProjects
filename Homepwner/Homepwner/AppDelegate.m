@@ -15,16 +15,28 @@
 
 @implementation AppDelegate
 
+- (BOOL)application:(UIApplication *)application
+willFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    return YES;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    _window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor=[UIColor whiteColor];
+//    // Override point for customization after application launch.
+//    _window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+//    _window.backgroundColor=[UIColor whiteColor];
+    //如果应用没有触发状态恢复，就创建并设置各个试图控制器
+    if(!self.window.rootViewController){
+        DCItemViewController *dcitem=[[DCItemViewController alloc]init];
+        UINavigationController *navController=[[UINavigationController alloc]initWithRootViewController:dcitem];
+        //将类名设为恢复标示
+        navController.restorationIdentifier=NSStringFromClass([navController class]);
+        //   [ main addChildViewController:dcitem];
+        _window.rootViewController=navController;
+    }
     
-    DCItemViewController *dcitem=[[DCItemViewController alloc]init];
-    UINavigationController *main=[[UINavigationController alloc]initWithRootViewController:dcitem];
-//   [ main addChildViewController:dcitem];
-    _window.rootViewController=main;
     [_window makeKeyAndVisible];
     return YES;
 }
@@ -41,6 +53,13 @@
     }else{
         NSLog(@"could not save any of the items");
     }
+}
+-(BOOL)application:(UIApplication*)application shouldSaveApplicationState:(NSCoder *)coder{
+    return YES;
+}
+
+-(BOOL)application:(UIApplication *)application shouldRestoreApplicationState:(NSCoder *)coder{
+    return  YES;
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
